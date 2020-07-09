@@ -1,0 +1,47 @@
+@charset "utf-8";
+#footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
+#contents {
+    border: 11px solid #000000;
+}
+#container {
+    width: 694px;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    background-repeat: repeat-y;
+    margin-left: 25%;
+    background-size: auto auto;
+    background-color: #F5F5F5;
+}
+#title {
+    padding-top: 10px;
+    background-image: url(images/title.jpg);
+    height: 118px;
+    background-size: cover;
+}
+body {
+    background-image: url(images/background.jpg);
+}
+#pano{
+/*Set the width of #pano to the total width of all the images combined*/
+	width: 1600px; /*(320px x 5)*/
+	/*missing line*/
+	position:relative;
+	/*missing line*/
+	z-index:0;
+}
+#panoWrapper{
+    /*Set the width of #panoWrapper equal to the width of one picture*/
+    width: 320px;
+    height: 240px;
+    /*missing line*/
+    overflow: hidden;
+    /*missing line*/
+    z-index: 1;
+    margin-left: 30%;
+}
+#pano img{
+    float: left;
+}

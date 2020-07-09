@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@media (max-width: 414px){
+#column #title p {
+	font-size: 61px;
+	height: 70%;
+	margin-top: 5px;
+	padding-top: 0px;
+	width: 58%;
+}
+#column p {
+	font-size: 59%;
+}
+
+#nav a {
+	font-size: 21px;
+}
+#column #title {
+	margin-top: -81px;
+}
+
+#nav {
+}
+
+
+
+}

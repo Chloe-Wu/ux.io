@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Garden</title>
+<style type="text/css">
+#container {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+#picMask {
+    width: 719px;
+    height: 420px;
+    position: relative;
+    overflow-y: hidden;
+    float: left;
+}
+#picHolder {
+    position: relative;
+}
+#theTitle {
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    font-size: xx-large;
+    text-align: center;
+}
+#indicator {
+    float: left;
+    width: 189px;
+    height: 420px;
+    background-image: url(spaceNeedleSmall.jpg);
+    background-size: cover;
+}
+#outline {
+    position: relative;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+  <div id="theTitle" onmouseover="doTheTitle()" >Space Needle</div>
+  <div id="picMask" onmousemove="getCurrentY(event)" onmouseover="keepItGoing(event)" onmouseout = "makeItStop()">
+    <div id="picHolder"><img  id="garden" src="spaceNeedle.jpg" width="719" height="1600"   alt=""/> </div>
+  </div>
+  <div id="indicator">
+    <div id="outline"><img src="outline.gif" width="189" height="110" alt=""/></div>
+  </div>
+</div>
+<script type="text/javascript">
+
+var currentPosition = 0;
+var timeId;
+var currentY;
+var titleText="";
+    
+    function getCurrentY(event){
+        currentY = event.clientY - 100; 
+    }
+
+function makeItStop() { clearInterval(timerId); }
+function keepItGoing(event) { 
+
+	 timerId = setInterval(function() {  
+if (currentY < 210 && currentPosition > 0)
+{currentPosition = currentPosition -2;} 
+else if(currentY >210 && currentPosition< 1200)
+{currentPosition = currentPosition +2;} 
+document.getElementById('picHolder').style.bottom = currentPosition + 'px';
+document.getElementById('outline').style.bottom = (-currentPosition/3.8) + 'px';
+}, 10);}
+    
+function doTheTitle(){
+    switch(true){
+    case (currentPosition < 10 && currentPosition > -500): 
+    titleText = "The Nautilus";
+    break;
+    case (currentPosition < -501 && currentPosition > -1000):
+    titleText = "<span style = color:slategrey>from Disney's 20,000 Leagues under the Sea</span>";
+    break; 
+    }
+    var theTitle= document.getElementById('theTitle').style.bottom = currentPosition + 'px';
+theTitle.innerHTML=titleText;
+}
+</script>
+</body>
+</html>

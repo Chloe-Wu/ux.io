@@ -1,0 +1,347 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pet Shop</title>
+<link href="pmm.css" rel="stylesheet" type="text/css">
+</head>
+<!--<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+
+<!-- Load the jquery UI library from the CDN -->
+<!--<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>		
+<!-- Load a basic stylesheet for structure and theme -->
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<body>
+<div id="container">
+ <div id="navbar">
+     <div id="title">Midway</div>
+    <!--<div id="slogan">&quot;Whether it's managing organizations, whether it's managing our lives. Now. &quot;</div>-->
+        <div id="pmName"><img src="image/boy.png" alt="/" class="round_icon">
+            <span> Alexander</span></div></div>
+  <div id="columnWrapper">
+      <div id="addPet"> <h2>&nbsp;&nbsp;Add a new task:</h2><br>
+      <div id="inputs">
+        <form id="inputForm">
+          <p>
+           <label for="taskName">Task Name: </label><br>
+           <input name="taskName" type="text" id="taskName"><br><br>
+            <label for="startD">Start Date:</label><br>
+  <input type="date" name="startD" id="startD"> 
+            <br>
+            <br>
+            <label for="endD">End Date:</label>
+            <br>
+  <input type="date" name="end" id="endD"> 
+            <br>
+            <br>
+            <label for="resourceName">Resource:</label>
+            <br>
+            <select id="resourceName">
+              <option value="0">Select Person:</option>
+              <option value="Alexander">Alexander</option>
+              <option value="Sophie">Sophie</option>
+              <option value="Ellen">Elen</option>
+              <option value="George">Geroge</option>
+            </select>
+            
+          </p>
+          <br>
+          <p>
+            <input type="button" name="button" id="button" value="Submit" onClick="getFromForm()">
+          </p>
+        </form>
+      </div>
+    </div>
+    <div id="currentInventory">
+     <div id="progress">There would be a progress graph.</div><br>  
+      <div id="sortButtons">&nbsp;&nbsp;Choose the attribute to sort by:
+        <input name="task" type="button" id="task" title="task" value="task" onClick="taskSort()">
+        <input name="startDate" type="button" id="startDate" title="startDate" value="Start Date" onClick="startDateSort()">
+        <input name="endDate" type="button" id="endDate" title="endDate" value="End Date " onClick="endDateSort()">
+        <input name="personName" type="button" id="personName" title="personName" value="End Date " onClick="personSort()">
+        <br>
+        <br>
+        <div id="answer">The Table shown</div>
+      </div>
+      <div class="clearIt"></div>
+    </div>
+    <div class="clearIt"></div>
+  </div>
+<div class="clearIt"></div>
+<div id="chart_div"></div>
+    <div id="chart_div2"></div></div>
+<script>
+        
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    </script>
+    
+    <script>
+    var a = document.getElementById("answer");
+    var tasks = [];
+    var selectPerson = document.getElementById('resourceName');
+// breedText holds the breed input
+    var startDD = document.getElementById('startD');
+// amountText holds the quantity input
+    var endDD = document.getElementById('endD');
+    var taskNameText = document.getElementById('taskName');
+    var sortBy = "task";
+    // iTitle is used to change the title of the inventory list
+iTitle=document.getElementById('inventoryTitle');
+// set the default title for the inventory list
+iTitle.innerHTML="Current Inventory (unsorted):";
+      
+        
+var dateoffset = 0;
+//NEW -- CONST USED FOR DATE CALCULATIONS (NUMBER OF MILLISECONDS IN DAY)
+const milliDays = 1000*60*60*24;
+//NEW -- USED FOR SHIPMENT COLUMN COLOR 
+var whichColor = "";
+//NEW -- USED FOR DATE CALCULATIONS
+var dateStart;
+var dateEnd;
+var dateDiff;
+        
+        
+function Task(TaskName,StartD,EndD,SelectPerson)
+        {
+        this.TaskName=TaskName;
+        this.StartD=StartD;
+        this.EndD=EndD;
+        this.SelectPerson=SelectPerson;
+        }
+        
+function getFromForm(){
+          var formPerson = selectPerson.value;
+		  //NEW - GET DATE OFFSET FOR NEXTSHIPMENT
+		  dateoffset = parseInt(startDD.value);
+        dateoffset2 = parseInt(endDD.value);
+		  // get the breed 
+		  
+		  // get the quantity and covert it to a number so the sort will work correctly
+		  var formName = String(taskNameText.value);
+		  // check to see if the breed already exists, if it does erase it!
+		  for (var i=0; i<tasks.length; i++)
+			{
+			if((tasks[i].TaskName == formName) && (tasks[i].StartD == dateoffset ))
+			{
+			tasks.splice(i,1);
+			}
+		}
+			// if the amount is not 0, then add the breed into the array
+			if (formName !=0)
+			{ time = new Date();
+			 
+			 time.setDate(time.getDate() +dateoffset);
+		
+			 var timeString = time.getMonth()+1+'/'+time.getDate()+'/'+time.getFullYear()
+			 	
+				var newTask = new Task(TaskName,StartD,EndD,SelectPerson);
+				tasks.push(newTask);
+			}
+			// clear the form	
+			selectPerson.options[0].selected = true;
+			
+			taskNameText.value = "";
+			//NEW - CLEAR NEXTSHIPMENTTEXT
+			startDD.value = "";
+            endDD.value = "";
+			// display the current inventory
+			//CHANGE - SORT BY BREED THEN FULL TYPESHORT
+			tasks.sort(sortByPerson);			
+			taskSort();
+			displayList();
+			// draw the charts
+			//drawChart();
+            
+    }
+        
+    function taskSort(){
+        sortBy="task";
+		iTitle.innerHTML="Current Inventory sorted by Task:"
+		tasks.sort(sortByStart);
+		tasks.sort(sortByEnd);
+        tasks.sort(sortByPerson);
+		displayList();
+    }
+    function startDateSort(){
+        sortBy="startDate";
+		iTitle.innerHTML="Current Inventory sorted by Task:"
+		tasks.sort(sortByEnd);
+		tasks.sort(sortByName);
+        tasks.sort(sortByPerson);
+		displayList();
+    }
+    function endDateSort(){
+        sortBy="endDate";
+		iTitle.innerHTML="Current Inventory sorted by Task:"
+		tasks.sort(sortByStart);
+		tasks.sort(sortByName);
+        tasks.sort(sortByPerson);
+		displayList();
+    }
+    function personSort(){
+        sortBy="personName";
+		iTitle.innerHTML="Current Inventory sorted by Task:"
+		tasks.sort(sortByStart);
+		tasks.sort(sortByEnd);
+        tasks.sort(sortByName);
+		displayList();
+    }
+        
+// sort by breed
+          
+function sortByName(task1, task2) 
+	  {
+		if(task1.TaskName > task2.TaskName) { return 1;}
+		else if (task1.TaskName === task2.TaskName){ return 0;}
+		else { return -1;}
+	  }
+// sort by quantity
+function sortByStart(task1, task2) 
+	  {
+		dateStart = Date.now();
+			var dateEnd1 = Date.parse(task1.StartD);
+			var dateDiff1 = (Math.abs((dateStart - dateEnd1)/milliDays))
+		
+			var dateEnd2 = Date.parse(task2.StartD);
+			var dateDiff2 = (Math.abs((dateStart - dateEnd2)/milliDays))
+		if(dateDiff1 > dateDiff2) { return 1;}
+		else if (dateDiff1 === dateDiff2){ return 0;}
+		else { return -1;}
+	  }
+	  }
+function sortByEnd(task1, task2) 
+	  {
+		dateStart = Date.now();
+			var dateEnd1 = Date.parse(task1.EndD);
+			var dateDiff1 = (Math.abs((dateStart - dateEnd1)/milliDays))
+		
+			var dateEnd2 = Date.parse(task2.EndD);
+			var dateDiff2 = (Math.abs((dateStart - dateEnd2)/milliDays))
+		if(dateDiff1 > dateDiff2) { return 1;}
+		else if (dateDiff1 === dateDiff2){ return 0;}
+		else { return -1;}
+	  }
+function sortByPerson(task1, task2) 
+	  {
+		if(task1.SelectPerson > task2.SelectPerson) { return 1;}
+		else if (task1.SelectPerson === task2.SelectPerson){ return 0;}
+		else { return -1;}
+	  }
+        
+        
+    
+    function displayList()
+        {
+        a.innerHTML="";
+		switch (sortBy)
+        {
+        case "task":{
+        a.innerHTML +='<div class=tabtitle>Task Name</div><div class=tabtitle>Start Date:</div><div class=tabtitle>Final Date</div><div class=tabtitle>Resource:</div><div class=clearIt><br>';
+        }
+        break;
+        
+        case "startDate":{
+        a.innerHTML +='<div class=tabtitle>Start Date:</div><div class=tabtitle>Final Date</div><div class=tabtitle>Task Name</div><div class=tabtitle>Resource:</div><div class=clearIt><br>';
+        }
+        break;
+                
+        case "endDate":{
+        a.innerHTML +='<div class=tabtitle>Final Date</div><div class=tabtitle>Start Date:</div><div class=tabtitle>Task Name</div><div class=tabtitle>Resource:</div><div class=clearIt><br>';
+        }
+        break;
+                
+        case "personName":{
+        a.innerHTML +='<div class=tabtitle>Resource:</div><div class=tabtitle>Start Date:</div><div class=tabtitle>Final Date</div><div class=tabtitle>Task Name</div><div class=clearIt><br>';
+        }
+        break;
+        }
+        for (var i=0; i<tasks.length; i++)
+		{
+			//NEW -- CALCULATE DIFFERENCE BETWEEN NOW AND NEXT SHIPMENT (.TIME)
+			dateStart = Date.now();
+			dateEnd = Date.parse(tasks[i].EndD);
+			dateDiff = (Math.abs((dateStart - dateEnd)/milliDays))
+
+		switch (sortBy)
+			{
+			case "personName":
+            { 
+			whichColor = "black";
+			if (dateDiff<3){whichColor = "red"}else
+			if (dateDiff<6){whichColor = "orange"}
+            a.innerHTML +='<div class=tabs>'+tasks[i].SelectPerson +'</div><div class=tabs>'+tasks[i].TaskName +'</div><div class=tabs>'+tasks[i].StartD +'</div><div class=tabs><span class = '+whichColor+'>'+tasks[i].EndD +'</span></div><div class=tabs><input type="button" name='+i+' value="Delete All" onClick="deleteAll(name)"><input type="button" name='+i+' value="Delete One" onClick="deleteOne(name)"></div><div class=clearIt>';
+			// Sort the array
+            tasks.sort(sortByPerson);
+			}
+    		break;
+					
+			case "task":
+            {
+			whichColor = "black";
+			if (dateDiff<3){whichColor = "red"}else
+			if (dateDiff<6){whichColor = "orange"}
+			a.innerHTML +='<div class=tabs>'+tasks[i].TaskName +'</div><div class=tabs>'+tasks[i].SelectPerson +'</div><div class=tabs>'+tasks[i].StartD +'</div><div class=tabs><span class = '+whichColor+'>'+tasks[i].EndD +'</span></div><div class=tabs><input type="button" name='+i+' value="Delete All" onClick="deleteAll(name)"><input type="button" name='+i+' value="Delete One" onClick="deleteOne(name)"><div class=clearIt>';
+			// Sort the array
+            tasks.sort(sortByName);
+			}
+			break;
+		
+			case "startDate":
+            {
+			whichColor = "black";
+			if (dateDiff<3){whichColor = "red"}else
+			if (dateDiff<6){whichColor = "orange"}
+			a.innerHTML +='<div class=tabs>'+tasks[i].StartD +'</div><div class=tabs>'+tasks[i].EndD +'</div><div class=tabs>'+tasks[i].TaskName +'</div><div class=tabs><span class ='+whichColor+'>'+tasks[i].SelectPerson +'</span></div><div class=tabs><input type="button" name='+i+' value="Delete All" onClick="deleteAll(name)"><input type="button" name='+i+' value="Delete One" onClick="deleteOne(name)"><div class=clearIt>';
+			// Sort the array
+            tasks.sort(sortByStart);
+			}
+			break;
+			//NEW -- SHIPDATE	
+			case "endDate":
+			{
+			whichColor = "black";
+			if (dateDiff<3){whichColor = "red"}else
+			if (dateDiff<6){whichColor = "orange"}
+			a.innerHTML +='<div class=tabs><span class ='+whichColor+'>'+tasks[i].EndD +'</span></div><div class=tabs>'+tasks[i].StartD +'</div><div class=tabs>'+tasks[i].TaskName +'</div><div class=tabs>'+tasks[i].SelectPerson +'</div><div class=tabs><input type="button" name='+i+' value="Delete All" onClick="deleteAll(name)"><input type="button" name='+i+' value="Delete One" onClick="deleteOne(name)"><div class=clearIt>';
+			// Sort the array
+            tasks.sort(sortByEnd);
+			}		
+					
+			}
+		}
+    }
+    function deleteAll(which)
+	  {
+    	tasks.splice(which,1);
+    	taskSort();
+    	displayList();
+    	drawChart();
+	  }
+        function deleteOne(which){
+    if(tasks[which].TaskName >1)
+	{
+    	tasks[which].TaskName = tasks[which].TaskName-1;
+		// resort by amount
+    	personSort();
+    	displayList();
+    	drawChart();
+	}
+    else 
+	{
+		deleteAll(which);
+	}
+        }
+</script>
+</body>
+</html>

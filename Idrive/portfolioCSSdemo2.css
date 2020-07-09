@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/* #373737 #C0B283 #DCD0D0 #F4F4F4 */
+
+svg{
+    font-family: 'Advent Pro', sans-serif;
+      justify-content:center;
+      align-items:center;
+}
+
+#contents{
+    align-content: center;
+    font-size: 250%;
+    font-weight: 600;
+    text-align: center;
+    line-height: 200%;
+    padding-top: 20px;
+}
+.IT h3{
+    margin-top:70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color:black;
+    text-align: center;
+    font-family: 'Advent Pro', sans-serif;
+    float: left;
+    text-shadow: 1px 2px 3px hsla(0,0%,62%,1.00);
+    border-bottom-color: hsla(0,0%,50%,0.55);
+    background-color: rgba(255, 255, 255, 0.38);
+    width:100%;
+    box-shadow: 0 16px 16px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+}
+#courseName {
+    background-color: hsla(0,0%,100%,1.00);
+}
+
+.IT a{
+    text-decoration: none;
+    float: left;
+    width: 33.3%;
+    height:400px;
+    //margin:5% 2%;
+    //border-radius: 500px;
+    -webkit-box-shadow: 8px 8px 20px hsla(0,0%,0%,0.60);
+    box-shadow: 18px 18px 20px hsla(0,0%,0%,0.60);
+    color: hsla(0,0%,100%,1.00);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .1s ease-in-out;
+    -webkit-transform: scale(1.0);
+    border-color: hsla(0,0%,0%,1.00);
+	text-align: center;
+	vertical-align: middle;
+}
+.IT a:hover{
+    text-decoration: none;
+    color:white;
+}
+.IT p{
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    overflow: hidden;	
+	word-wrap:normal;
+    //border-radius: 500px;
+	vertical-align: middle;
+	text-align: center;
+    transition:.4s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.22);
+}
+.IT p:hover{
+    text-decoration:none;
+    font-family: 'Advent Pro', sans-serif; 
+    font-weight: 100;
+    font-size: 4vw;
+    color: black;
+    background-color: hsla(0,0%,100%,0.85);
+    overflow: hidden;	
+	word-wrap:normal;
+    //border-radius: 500px;
+	vertical-align: middle;
+	text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+}
+.IT span{
+    width: 400px;
+    height: 400px;
+}
+
+#image {
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url(image/WechatIMG169.jpeg);
+    background-position: center 0%;
+    background-size: contain;
+    height: 1000px;
+    max-height: 100%;
+}
+.IT a.a2{
+	position: relative;
+    background-image: url("image/1752FEF1-7D1B-4766-9B72-94C5CA6B9AFB_1_105_c.jpeg");
+    background-position: center center;
+}
+.IT a.a2:before{
+    background-image: url("image/1752FEF1-7D1B-4766-9B72-94C5CA6B9AFB_1_105_c.jpeg");
+    background-position: center center;
+}
+.IT a.a1{
+    background-image: url("image/4EA03F28-CC4B-4ADC-AD1D-BA99A528AC11_1_105_c.jpeg");
+    background-position: center center;
+}
+.IT a.a3{
+    background-image: url("image/557AC682-05F2-4B63-9A98-41FEE83172F7_1_105_c.jpeg");
+    background-position: center center;
+}
+.IT a.a4{
+    background-image: url("image/66116EDE-DA8C-4B80-A1C3-7F156326F030_1_105_c.jpeg");
+    background-position: center center;
+}
+.IT a.a5{
+    background-image: url(image/IMG_1847.jpeg);
+    background-position: center center;
+}
+.IT a.a6{
+    background-image: url(image/IMG_1846.jpeg);
+    background-position: center center;
+}
+.IT a.a7{
+    background-image: url(image/IMG_1844.jpeg);
+    background-position: center center;
+}
+.IT a.b1{
+    background-image: url(image/p1.jpeg);
+    background-position: center center;
+}
+.IT a.b2{
+    background-image: url(image/p2.jpeg);
+    background-position: center center;
+}
+.IT a.b3{
+    background-image: url(image/p3.jpeg);
+    background-position: center center;
+}
+.IT a.b4{
+    background-image: url(image/p4.jpeg);
+    background-position: center center;
+}
+.IT a.b5{
+    background-image: url(image/p5.jpeg);
+    background-position: center center;
+}
+.IT a.b6{
+    background-image: url(image/p6.jpeg);
+    background-position: center center;
+}
+.IT a.c1{
+    background-image: url(image/c1.jpeg);
+    background-position: center center;
+}
+.IT a.c2{
+    background-image: url(image/c2.jpeg);
+    background-position: center center;
+}
+.IT a.c3{
+    background-image: url(image/c3.jpeg);
+    background-position: center center;
+}
+.IT a.c4{
+    background-image: url(image/c4.jpeg);
+    background-position: center center;
+}
+.IT a.c5{
+    background-image: url(image/c5.jpeg);
+    background-position: center center;
+}
+.IT a.c6{
+    background-image: url(image/c6.jpeg);
+    background-position: center center;
+}
+.IT a.c7{
+    background-image: url(image/c7.jpeg);
+    background-position: center center;
+}
+.IT a.d1{
+    background-image: url(image/d1.jpg);
+    background-position: center center;
+}
+.IT a.d2{
+    background-image: url(image/d2.jpg);
+    background-position: center center;
+}
+.IT a.d3{
+    background-image: url(image/d3.jpg);
+    background-position: center center;
+}
+.IT a.d4{
+    background-image: url(image/d4.jpg);
+    background-position: center center;
+}
+.IT a.d5{
+    background-image: url(image/d5.jpg);
+    background-position: center center;
+}
+.IT a.d6{
+    background-image: url(image/d6.jpg);
+    background-position: center center;
+}
+.IT a.d7{
+    background-image: url(image/d7.jpg);
+    background-position: center center;
+}
+.IT a.e1{
+    background-image: url(image/e1.jpeg);
+    background-position: center center;
+}
+.IT a.e2{
+    background-image: url(image/e2.jpg);
+    background-position: center center;
+}
+.IT a.e3{
+    background-image: url(image/e3.jpeg);
+    background-position: center center;
+}
+.IT a.e4{
+    background-image: url(image/e4.jpeg);
+    background-position: center center;
+}
+.IT a.e5{
+    background-image: url(image/e5.jpeg);
+    background-position: center center;
+}
+.IT a.e6{
+    background-image: url(image/e6.jpeg);
+    background-position: center center;
+}
+.IT a.e7{
+    background-image: url(image/e7.jpeg);
+    background-position: center center;
+}

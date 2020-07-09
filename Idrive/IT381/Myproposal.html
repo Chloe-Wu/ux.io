@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile website starter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1>MFC Project Proposal</h1>
+</div>
+<div class="ui-content" role="main">
+	<ul data-role="listview">
+    <li><a href="#page1">Problem and Scope</a></li>
+    <li><a href="#page2">Audience</a></li>
+    <li><a href="#page3">Road Map</a></li>
+    <li><a href="#page4">Technology Used</a></li>
+    </ul>
+</div>
+<div data-role="footer">
+	<h4>Yiwei.W&nbsp;2020</h4>
+</div>
+</div>
+
+<div data-role="page" id="page1">
+<div data-role="header">
+<a href="#page" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Scope</h1>
+</div>
+<div class="ui-content">
+	<div id="description">
+        <p><b>Problem: What problem does this app solve for the consumer? For the producer?  Does it sell an idea or a product? </b></p>
+  <p>Since the COVID-19 causes, MFC(a fast food restaurant) develops the app，and offers online orders and delivery services which can help customers stay home to get their favorite food. MFC can make money also without worried about infection.</p>
+        <p><b>Scope: Does the app aim to be a "one stop shop"? Does it give all of the information possible about the idea or product being sold?  Any comparisons to other products? Reviews? Illustrations? Graphs? </b></p>
+        <p>MFC is not a one-stop shop because it only sells fast food such as hamburgers, French fries, fried chicken, chicken wings, pizza, and so on. Unlike other restaurants that need customers to call the front desk, MFC lets them read the menu and order food on the app. Secondary, many restaurants outsource their delivery services to third-party platforms, and MFC has its own drivers who are trained in contactless delivery. Food information like price, content, picture, the size will be displayed in the app.</p>
+</div>
+</div>
+<div data-role="footer">
+<h4>Yiwei.W&nbsp;2020</h4>
+</div>
+</div>
+
+<div data-role="page" id="page2">
+<div data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Intended Audience</h1>
+</div>
+<div class="ui-content">
+		<div id="Audience">
+            <p><b>Who makes up the audience that this app seeks to serve?  What are their demographics?  Is it targeted to a specific group, or more general in nature?</b></p>
+	  	  <p>In Eburg, the audience is the people who remain here (students would be the target). The population would be 7,000. Basically, it focuses on the people who have no time/materials to cook, and the people who try the best to stay safe. </p>
+	</div>
+</div>
+<div data-role="footer">
+<h4>Yiwei.W&nbsp;2020</h4>
+</div>
+</div>
+
+<div data-role="page" id="page3">
+<div data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Page Three Title</h1>
+</div>
+	<div><p>The Road Map section should cover:<br>
+        A plan for completing the most important features:</p></div>
+        	<div class="ui-content" data-role="collapsible-set">
+	<div id="RoadMap" data-role="collapsible">
+<h3>Interface design: </h3>
+<p>draw the prototype (UI structure)</p>
+</div>
+<div data-role="collapsible">
+<h3>Technology integration:</h3>
+<p>Jquery Mobile, Map, Icon, Time, local storage</p>
+</div>
+<div data-role="collapsible">
+<h3>Script development:</h3>
+<p>the technology such as map, time, local storage, calculation needs the JS.</p>
+</div>
+<div data-role="collapsible">
+<h3> long term release schedule <br>- what will happen in future upgrades?</h3>
+<p>The JS might be changed due to the design.</p>
+</div>
+</div>
+
+<div data-role="footer">
+<h4>Yiwei.W&nbsp;2020</h4>
+</div>
+</div>
+
+<div data-role="page" id="page4">
+<div data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Technical Use</h1>
+</div>
+<div class="ui-content" role="main">
+	<p>List the technology and interactions that will be included in the site.  Define how local storage will be used.</p>
+      	<ul>
+             <li>All the information should be stored in the XML file.</li>
+      	    <li>The listview to show the food.(Menu page)</li>
+      	    <li>The second page would be the order page. Add flavor(checkbox) and choose drink(radio button) or sides(checkbox). Coupon(Yes or No).Calculate the price.</li>
+      	    <li>The localStorage would be the order save. After choosing the food, the, they would appear in the local Storage page.</li>
+      	    <li>The panel would be used as the customer information</li>
+      	    <li>Delivery choice:radio button</li>
+      	    <li>Map would show how many restaurants around the Eburg.(optional, still thinking if I should add it)</li>
+      	</ul>
+</div>
+<div data-role="footer">
+<h4>Yiwei.W&nbsp;2020</h4>
+</div>
+</div>
+</body>
+</html>

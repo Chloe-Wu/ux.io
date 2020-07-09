@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Individual users</title>
+<script src="https://kit.fontawesome.com/4a082b50eb.js" crossorigin="anonymous"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap" rel="stylesheet"> 
+<script type="text/javascript" src="finalJs.js"></script>
+<script>
+	function openSlideMenu(){
+		document.getElementById('sidebar').style.width='250px';
+		document.getElementById('wrapper').style.marginLeft='250px';
+		
+	}
+		function closeSlideMenu(){
+		document.getElementById('sidebar').style.width='0';
+		document.getElementById('wrapper').style.marginLeft='0';
+	}
+</script>
+<!-- Load the base jquery code from the jquery Content Distribution Network (CDN) -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+<!-- Load the codes necessary to migrate from an earlier version (optional) -->
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script>
+<!-- Load the jquery UI library from the CDN -->
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>		
+<!-- Load a basic stylesheet for structure and theme -->
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script>
+$(function(){
+$("#accord").accordion();
+});
+</script>
+	<script>
+	$(this).click(function() {
+	  $("#effect").toggle( "explode",{pieces:16},"slow" );
+	});
+	</script>
+</head>
+
+<body>
+	<div id="wrapper">
+	  <span class ="align">
+	<a href="#" onclick="openSlideMenu()">
+		<i class="fas fa-align-justify"></i>
+	</a>
+		</span>
+		
+	<div id ="sidebar" class="nav">
+		<a href="#" class="close" onclick="closeSlideMenu()">
+		<i class="fas fa-times" style="background-image: none; background-color: #24252A;"></i>
+		</a>
+		<div class="Name">EASYPRINT</div>
+				<ul>
+			<li><a href ="Home.html">Home</a></li>
+			<li><a href ="Tutorial.html">How It Works</a></li>	
+			<li class="dropdown"><a href ="#" class="drop">Services</a>
+					  <div class="dropdown-content">
+    					<a href="#">Individual</a>
+    					<a href="business.html">Entertainment</a></div>
+  					</li>
+				</ul>
+			
+		
+	</div>
+		<div id="background">
+		<div id="contents">
+			
+		  <h2 id="title" style="background-image:none;"><img id="effect" src="image/icon.png" width="30px" style="border:none;">   Software users</h2>
+			
+		<div id="accord"><h3>Intro</h3>
+		  <div><p>Customers who prefer to enjoy fast and easy print method rather than buying the equipment, we recommend them to directly download the "Easyprint"app. After you download it, please follow the instruction and create the account first. Easyprint app can let you print or scan pages from any Easyprint printer station. </p></div>
+			<h3>Why choosing Easyprint</h3>
+				<div><p>Easyprint has become one of the most famous printer service which can give you the A+ customer service experience. You can find our print stations from the map on the app. Until 2020, we have  more coorperated with more than 500 entertainments and have gotten approximately 10,000 users.&nbsp;&nbsp; </p></div>
+			<h3>Different purchase types</h3>
+		  <div><p>You can choose to pay-for-print ways. One way is to despoit the buck to your Easyprint account, it would depends on you of how much you want to deposit.And everytime, you can choose to print the black-white paper or the colorful one. The advantage of that is you do not need to worried about wasting money monthly.You can also choose to subscribe the print service plan below.</p></div></div>
+
+		
+		<div id="tablePri" style="background-image:none;">
+			<div class="tableCont">
+				<div class="type" id="type">
+				<h2 id="sub">Free trial</h2>
+				<div class="price" id="price">$0</div>
+				<ul>
+					<li class="per" id="per">1 month</li>
+					<li class="char1">Print Service</li>
+					<li class="char2" >Scan Service</li>
+					<li class="char3" >3 black and white pages</li>
+					<li class="char4">1 colored page</li>
+					<li><a href="#">Buy Now</a></li>
+				</ul>
+					
+				</div>
+			</div>
+			<div class="tableCont">
+				<div class="type">
+				<h2 >Regular</h2>
+					<div class="pop">Popular</div>
+				<div class="price">$10</div>
+				<ul>
+					<li class="per">per month</li>
+					<li class="char1">print service</li>
+					<li class="char2">scan service</li>
+					<li> 100 black and white pages</li>
+					<li>50 colored pages</li>
+					<li><a href="#">Buy Now</a></li>
+				</ul>
+					
+				</div>
+			</div>
+			<div class="tableCont">
+				<div class="type">
+				<h2>Premium</h2>
+				<div class="price">$25</div>
+				<ul>
+					<li class="per">per month</li>
+					<li>print service</li>
+					<li>scan service</li>
+					<li> 200 black and white pages</li>
+					<li>80 colored pages</li>
+					<li><a href="#">Buy Now</a></li>
+				</ul>
+				
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

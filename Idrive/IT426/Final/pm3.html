@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pet Shop</title>
+<link href="pm.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div id="container">
+  <div id="navbar">
+     <div id="title">Midway</div>
+    <!--<div id="slogan">&quot;Whether it's managing organizations, whether it's managing our lives. Now. &quot;</div>-->
+        <div id="pmName"><img src="image/boy.png" alt="/" class="round_icon">
+            <span> Alexander</span></div></div>
+  <div id="columnWrapper">
+    <div id="addPet"> &nbsp;&nbsp;Add a new task:
+      <div id="inputs">
+        <form id="inputForm">
+          <p>
+			 <!--Committee -->
+           <label for ="inputQuantity">Task Name:</label>
+            <br>
+            <input name="inputQuantity" type="text" id="inputQuantity">
+            <br><br>
+            <label for = "dropType">Type: </label>
+            <br>
+            <select id="dropType" onChange="populateSelectBreed()">
+              <option>Select Type</option>
+              	<option value="Fixed Units">Fixed Units</option>
+				<option value="Fixed Work" >Fixed Work</option>
+              	<option value="Fixed Duration">Fixed Duration</option>
+            </select>
+            <br>
+            <br>
+			 <!--Class Standing -->
+            <label for ="dropBreed">Resource: </label>
+            <br>
+            <select disabled="disabled" id="dropBreed">
+              <option value="0">Select Person:</option>
+            </select>
+            <br>
+            <br>
+			  <!-- Name -->
+            
+
+			  <!--End of term -->
+			<!--NEW -- INPUT FOR NEXT SHIPMENT-->
+            <label for ="inputShipment">Deadline</label>
+            <br>
+            <input name="inputShipment" type="date" id="inputShipment">
+          </p>
+          <p>
+            <input type="button" name="button" id="button" value="Submit" onClick="getFromForm()">
+          </p>
+        </form>
+      </div>
+    </div>
+    <div id="currentInventory">
+      <div id="sortButtons">&nbsp;&nbsp;Sort by?
+        <input name="Type" type="button" id="Type" title="Type" value="Task Type" onClick="typeSort()">
+        <input name="Breed" type="button" id="Breed" title="Breed" value="Class Standing" onClick="breedSort()">
+        <input name="Amount" type="button" id="Amount" title="Amount" value="Student Name" onClick="amountSort()">
+		<!-- NEW -- NEXT SHIPMENT SORT -->
+		<input name="ShipDate" type="button" id="ShipDate" title="Ship Date" value="Term End" onClick="shipSort()">
+        <br>
+        <br>
+        <div id="inventoryTitle"></div>
+        <div id="answer"></div>
+      </div>
+      <div class="clearIt"></div>
+    </div>
+    <div class="clearIt"></div>
+  </div>
+</div>
+<div class="clearIt"></div>
+<div id="chart_div"></div>
+<div id="chart_div2"></div>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+  <script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+      // Setup and draw the charts
+      function drawChart() {
+		// Create the first chart - Inventory by Breed
+		// Convert the array created by the program into a form the chart can use 
+		var petString = "[";
+		for (var i=0; i<pets.length; i++)
+		  {petString += "['"+pets[i].breed+"',"+pets[i].amount+"],";}
+		petString = petString.substring(0, petString.length-1)+"]";
+		// Create the data for the chart
+		var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Inventory by Breed');
+        data.addColumn('number', 'In stock:');
+		data.addRows(eval(petString));
+
+        // Set chart options
+        var options = {'title':'Inventory by Breed',
+                       'width':400,
+                       'height':300};
+
+        // Draw the first chart using the data and options
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+		
+		// Now create the second chart - Inventory by Type
+		// Set variables
+		var typeString = "";
+		var countMammal = 0;
+		var countReptile = 0;
+		var countBird = 0;
+		var countFish = 0;
+		// Loop through the objects in the pets array
+		for (var i=0; i<pets.length; i++)
+		{ 	  
+		 switch(pets[i].type)
+		 {
+		  case "Fixed Units":
+		  	countMammal++;
+			break;
+		  case "Fixed Work":
+		  	countBird++;
+		  	break;
+		  case "Fixed Duration":
+		  	countFish++;
+		  }
+		}
+		var typeString="[['Mammals',"+countMammal+"],['Birds',"+countBird+"],['Reptiles',"+countReptile+"],['Fish',"+countFish+"]]";
+
+		// Create the data for the chart
+  		var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Inventory by Breed');
+        data.addColumn('number', 'In stock:');
+        data.addRows(eval(typeString));
+		
+        // Set chart options
+        var options = {'title':'Inventory by Type',
+                       'width':400,
+                       'height':300};
+
+        // Draw the second chart using the data and options
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div2'));
+        chart.draw(data, options);	
+      }
+
+
+// declare variables
+// answer is the div that holds the list
+var a = document.getElementById("answer");
+// pets is the array that hold all of the information
+var pets = [];
+// selectType sets the Type in the form
+var selectType = document.getElementById('dropType');
+// breedText holds the breed input
+var selectBreed = document.getElementById('dropBreed');
+// amountText holds the quantity input
+var amountText = document.getElementById('inputQuantity');
+// NEW -- nextShipmentText HOLDS THE NUMBER OF DAYS BEFORE THE NEXT SHIPMENT
+var nextShipmentText = document.getElementById('inputShipment')
+// sortBy holds the current sort for use in displaylist
+var sortBy = "Type"
+// iTitle is used to change the title of the inventory list
+iTitle=document.getElementById('inventoryTitle');
+// set the default title for the inventory list
+iTitle.innerHTML="Current Inventory (unsorted):";
+//NEW --  VAR FOR NUMBER OF DAYS BEFORE NEXT SHIPMENT
+var dateoffset = 0;
+//NEW -- CONST USED FOR DATE CALCULATIONS (NUMBER OF MILLISECONDS IN DAY)
+const milliDays = 1000*60*60*24;
+//NEW -- USED FOR SHIPMENT COLUMN COLOR 
+var whichColor = "";
+//NEW -- USED FOR DATE CALCULATIONS
+var dateStart;
+var dateEnd;
+var dateDiff;
+	  
+// Main Pet constructor
+function Pet(type, breed, amount, time) 
+	  {	
+		this.type = type;
+		this.breed = breed;
+		this.amount = amount;
+		this.time = time;
+	  }
+
+// Read the form into the array
+function getFromForm()
+	  	{    
+		  var formType = selectType.value;
+		  //NEW - GET DATE OFFSET FOR NEXTSHIPMENT
+		  dateoffset = parseInt(nextShipmentText.value);
+		  // get the breed 
+		  var formBreed=selectBreed.value;
+		  // get the quantity and covert it to a number so the sort will work correctly
+		  var formAmount = String(amountText.value);
+		  // check to see if the breed already exists, if it does erase it!
+            var formDate = nextShipmentText.value;
+		  for (var i=0; i<pets.length; i++)
+			{
+			if((pets[i].breed == formBreed) && (pets[i].type == formType))
+			{
+			pets.splice(i,1);
+			}
+		}
+			// if the amount is not 0, then add the breed into the array
+			if (formAmount !=0)
+			{ time = new Date();
+			 
+			 time.setDate(time.getDate() +dateoffset);
+		
+			 var timeString = time.getMonth()+1+'/'+time.getDate()+'/'+time.getFullYear()
+			 	
+				var newPet = new Pet(formType,formBreed,formAmount,formDate);
+				pets.push(newPet);
+			}
+			// clear the form	
+			selectType.options[0].selected = true;
+			selectBreed.options[0].selected = true;
+			amountText.value = "";
+			//NEW - CLEAR NEXTSHIPMENTTEXT
+			nextShipmentText.value = "";
+			// display the current inventory
+			//CHANGE - SORT BY BREED THEN FULL TYPESHORT
+			pets.sort(sortByBreed);			
+			typeSort();
+			displayList();
+			// draw the charts
+			drawChart();
+		}
+
+function typeSort()
+	  {
+		sortBy="Type";
+		iTitle.innerHTML="Current Inventory sorted by Type:"
+		pets.sort(sortByBreed);
+		pets.sort(sortByType);
+		displayList();
+	  }
+function breedSort()
+	  {
+		sortBy="Breed";
+		iTitle.innerHTML="Current Inventory sorted by Breed:"
+		pets.sort(sortByType);
+		pets.sort(sortByBreed);
+		displayList();
+	  }
+function amountSort()
+	  {
+		sortBy="Amount";
+		iTitle.innerHTML="Current Inventory sorted by Quantity:"
+    	pets.sort(sortByType);
+		pets.sort(sortByAmount);	
+		displayList();
+	  }
+//NEW - DISPLAY BY SHIPPING DATE
+function shipSort()
+	  {
+		sortBy="ShipDate";
+		iTitle.innerHTML="Current Inventory sorted by Shipping Date:"
+    	pets.sort(sortByType);
+		pets.sort(sortByShipDate);	
+		displayList();
+	  }
+
+// sort by type
+function sortByType(pet1, pet2) 
+	  {
+		if(pet1.type > pet2.type) { return 1;}
+		else if (pet1.type === pet2.type){ return 0;}
+		else { return -1;}
+	  }
+// sort by breed
+function sortByBreed(pet1, pet2) 
+	  {
+		if(pet1.breed > pet2.breed) { return 1;}
+		else if (pet1.breed === pet2.breed){ return 0;}
+		else { return -1;}
+	  }
+// sort by quantity
+function sortByAmount(pet1, pet2) 
+	  {
+		if(pet1.amount > pet2.amount) { return 1;}
+		else if (pet1.amount === pet2.amount){ return 0;}
+		else { return -1;}
+	  }
+//NEW - SHORT BY SHIP DATE
+function sortByShipDate(pet1, pet2) 
+	  {
+		  	dateStart = Date.now();
+			var dateEnd1 = Date.parse(pet1.time);
+			var dateDiff1 = (Math.abs((dateStart - dateEnd1)/milliDays))
+		
+			var dateEnd2 = Date.parse(pet2.time);
+			var dateDiff2 = (Math.abs((dateStart - dateEnd2)/milliDays))
+		if(dateDiff1 > dateDiff2) { return 1;}
+		else if (dateDiff1 === dateDiff2){ return 0;}
+		else { return -1;}
+	  }
+
+function displayList()
+	  // Display the current inventory list
+	  {
+		a.innerHTML="";
+		switch (sortBy)
+		{
+			case "Type":
+			a.innerHTML +='<div class=tabtitle>Committee</div><div class=tabtitle>Class Standing</div><div class=tabtitle>Student Name</div><div class=tabtitle>Term End</div><div class=clearIt><br>';
+			break;
+				
+			case "Breed":
+			a.innerHTML +='<div class=tabtitle>Class Standing</div><div class=tabtitle>Committee</div><div class=tabtitle>Student Name</div><div class=tabtitle>Term End</div><div class=clearIt><br>';
+			break;
+				
+			case "Amount":
+			a.innerHTML +='<div class=tabtitle>Student Name</div><div class=tabtitle>Committee</div><div class=tabtitle>Class Standing</div><div class=tabtitle>Term End</div><div class=clearIt><br>';
+			break;
+			//NEW -- SHIPDATE	
+			case "ShipDate":
+			a.innerHTML +='<div class=tabtitle>Term End</div><div class=tabtitle>Student Name</div><div class=tabtitle>Committee</div><div class=tabtitle>Class Standing</div><div class=clearIt><br>';
+			break;
+		}
+		for (var i=0; i<pets.length; i++)
+		{
+			//NEW -- CALCULATE DIFFERENCE BETWEEN NOW AND NEXT SHIPMENT (.TIME)
+			dateStart = Date.now();
+			dateEnd = Date.parse(pets[i].time);
+			dateDiff = (Math.abs((dateStart - dateEnd)/milliDays))
+
+		switch (sortBy)
+			{
+			case "Type":
+            { 
+			whichColor = "black";
+			if (dateDiff<3){whichColor = "red"}else
+			if (dateDiff<6){whichColor = "orange"}
+            a.innerHTML +='<div class=tabs>'+pets[i].type +'</div><div class=tabs>'+pets[i].breed +'</div><div class=tabs>'+pets[i].amount +'</div><div class=tabs><span class = '+whichColor+'>'+pets[i].time +'</span></div><div class=tabs><input type="button" name='+i+' value="Delete All" onClick="deleteAll(name)"><input type="button" name='+i+' value="Delete One" onClick="deleteOne(name)"></div><div class=clearIt>';
+			// Sort the array
+            pets.sort(sortByType);
+			}
+    		break;
+					
+			case "Breed":
+            {
+			whichColor = "black";
+			if (dateDiff<3){whichColor = "red"}else
+			if (dateDiff<6){whichColor = "orange"}
+			a.innerHTML +='<div class=tabs>'+pets[i].breed +'</div><div class=tabs>'+pets[i].type +'</div><div class=tabs>'+pets[i].amount +'</div><div class=tabs><span class = '+whichColor+'>'+pets[i].time +'</span></div><div class=tabs><input type="button" name='+i+' value="Delete All" onClick="deleteAll(name)"><input type="button" name='+i+' value="Delete One" onClick="deleteOne(name)"><div class=clearIt>';
+			// Sort the array
+            pets.sort(sortByBreed);
+			}
+			break;
+		
+			case "Amount":
+            {
+			whichColor = "black";
+			if (dateDiff<3){whichColor = "red"}else
+			if (dateDiff<6){whichColor = "orange"}
+			a.innerHTML +='<div class=tabs>'+pets[i].amount +'</div><div class=tabs>'+pets[i].type +'</div><div class=tabs>'+pets[i].breed +'</div><div class=tabs><span class ='+whichColor+'>'+pets[i].time +'</span></div><div class=tabs><input type="button" name='+i+' value="Delete All" onClick="deleteAll(name)"><input type="button" name='+i+' value="Delete One" onClick="deleteOne(name)"><div class=clearIt>';
+			// Sort the array
+            pets.sort(sortByAmount);
+			}
+			break;
+			//NEW -- SHIPDATE	
+			case "ShipDate":
+			{
+			whichColor = "black";
+			if (dateDiff<3){whichColor = "red"}else
+			if (dateDiff<6){whichColor = "orange"}
+			a.innerHTML +='<div class=tabs><span class ='+whichColor+'>'+pets[i].time +'</span></div><div class=tabs>'+pets[i].amount +'</div><div class=tabs>'+pets[i].type +'</div><div class=tabs>'+pets[i].breed +'</div><div class=tabs><input type="button" name='+i+' value="Delete All" onClick="deleteAll(name)"><input type="button" name='+i+' value="Delete One" onClick="deleteOne(name)"><div class=clearIt>';
+			// Sort the array
+            pets.sort(sortByShipDate);
+			}		
+					
+			}
+		}
+	  }
+function deleteAll(which)
+	  {
+    	pets.splice(which,1);
+    	typeSort();
+    	displayList();
+    	drawChart();
+	  }
+function deleteOne(which){
+    if(pets[which].amount >1)
+	{
+    	pets[which].amount = pets[which].amount-1;
+		// resort by amount
+    	amountSort();
+    	displayList();
+    	drawChart();
+	}
+    else 
+	{
+		deleteAll(which);
+	}
+}
+
+function populateSelectBreed(){
+	  	var valueFromSelectType = 0;
+	  var secondaryArray=[];
+		//first clear out mySecondary:
+			for (var i=selectBreed.options.length-1; i>=1; i--)
+	{
+			selectBreed.remove(i);
+	}
+
+		//get choice from myMain
+		valueFromSelectType = selectType.value.split(',')[0];
+		
+		//var secondaryArray=[];
+		
+		switch(valueFromSelectType){
+			case "Fixed Units":
+				secondaryArray=[{name:"Sophie",value:"Sophie"},{name:"Alexander",value:"Alexander"},{name:"Ellen",value:"Ellen"},{name:"Megan",value:"Megan"},{name:"George",value:"George"},{name:"abdullah",value:"abdullah"}];
+				break;
+			case "Fixed Work":
+				secondaryArray=[{name:"Sophie",value:"Sophie"},{name:"Alexander",value:"Alexander"},{name:"Ellen",value:"Ellen"},{name:"Megan",value:"Megan"},{name:"George",value:"George"},{name:"abdullah",value:"abdullah"}];
+				break;
+			case "Fixed Duration":
+				secondaryArray=[{name:"Sophie",value:"Sophie"},{name:"Alexander",value:"Alexander"},{name:"Ellen",value:"Ellen"},{name:"Megan",value:"Megan"},{name:"George",value:"George"},{name:"abdullah",value:"abdullah"}];
+				break;
+		}
+		
+	for(var i=0; i<secondaryArray.length;i++)
+	{
+	//populate second drop down
+		var dropItem = document.createElement("option");
+		dropItem.textContent = secondaryArray[i].name;
+		dropItem.value = secondaryArray[i].value;
+		selectBreed.appendChild(dropItem);
+	}
+		selectBreed.disabled = false;
+	}
+
+
+</script>
+</body>
+</html>

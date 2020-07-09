@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name-"keyword" content="The entertainment customer of Easyprint">
+<meta name="description" content="The page describes the benefits of the plan and two package prices.">
+<title>Provider</title>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+<!-- Load the codes necessary to migrate from an earlier version (optional) -->
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script>
+<!-- Load the jquery UI library from the CDN -->
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>		
+<!-- Load a basic stylesheet for structure and theme -->
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://kit.fontawesome.com/4a082b50eb.js" crossorigin="anonymous"></script>
+<link href="style2.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap" rel="stylesheet"> 
+<script>
+	function openSlideMenu(){
+		document.getElementById('sidebar').style.width='250px';
+		document.getElementById('wrapper').style.marginLeft='250px';
+		
+	}
+		function closeSlideMenu(){
+		document.getElementById('sidebar').style.width='0';
+		document.getElementById('wrapper').style.marginLeft='0';
+	}
+</script>
+	<script>
+	$(this).click(function() {
+	  $("#effect").toggle( "explode",{pieces:16},"slow" );
+	});
+	</script>
+	<script>
+$(function(){
+$("#accord").accordion();
+});
+</script>
+</head>
+
+<body>
+	<div id="wrapper">
+	  <span class ="align">
+	<a href="#" onclick="openSlideMenu()">
+		<i class="fas fa-align-justify" style="color:white;"></i>
+	</a>
+		</span>
+		
+	<div id ="sidebar" class="nav">
+		<a href="#" class="close" onclick="closeSlideMenu()">
+		<i class="fas fa-times" style="background-image: none; background-color: #24252A;"></i>
+		</a>
+		<div class="Name">EASYPRINT</div>
+				<ul>
+			<li><a href ="Home.html">Home</a></li>
+			<li><a href ="Tutorial.html">How It Works</a></li>	
+			<li class="dropdown"><a href ="#" class="drop">Services</a>
+					  <div class="dropdown-content">
+    					<a href="individual.html">Individual</a>
+    					<a href="business.html">Entertainment</a></div>
+  					</li>
+				</ul>
+			
+		
+	</div>
+		<div id="background">
+		<div id="content">
+		<h1>Entertainment</h1>
+		<div id="accord">
+		<h3>Hardware+Software</h3>
+		<div><p>The entertainment which decide to use our both hardware and software service, we offer the print machine, software and installation service.</p></div>
+		<h3>Benefits</h3><div>	
+		<p>If you want to offer a good environment for your employees, it would be a good choice to choose us. Traditionally. people prefer to move the printer to his or her office. However, it would waste a lot of money for the entertainment if they equip the printer and scanner with each of the office. Sometimes, if the traditional printer has already have many tasks from users, they have to waste time and wait in front of the printer. The Easyprint station would calculate the print waitlist and let every user know which printer is not busy. It can help the entertainment increases working efficiency. </p></div>
+		
+		<h3>Status Report</h3>
+		<div><p>The entertainment can also link the company system and the printer station to control and report the status of the printer station. The data would be returned to the administration department. </p></div>
+		<h3>Technical support for printer station</h3>
+		<div><p>We also have the professional technical service team. We provide the service of evaluating the number of printer stations the entertainment needs, the moving and connection service, and customer support service. </p></div></div>
+		<div id="printIm" >
+			<img id ="effect" src="image/printer.jpg" width="500px" height="300px">
+			<p>The newest model of Easyprint printer station.</p><br><p>If the company is interested in purchasing the package of equipment and the software, please contact us and we would customize the company plan by its budget, building scale, number of employees,etc.</p>
+			<br><p>There are two sample plans below:</p></div>
+		<div id="tablePri">
+			<div class="tableCont">
+				<div class="type">
+				<h2>Small Package</h2>
+				<div class="price">$2,000</div>
+				<ul>
+					<li class="per">+$100 service fee per month</li>
+					<li>3 printer stations</li>
+					<li>100 free accounts</li>
+					<li>Paper Sheets(5,000)</li>
+					<li>Warranty Period:1 year</li>
+					<li><a href="#">Buy Now</a></li>
+				</ul>
+					
+				</div>
+			</div>
+			<div class="tableCont">
+				<div class="type">
+				<h2>Premium Package</h2>
+					<div class="pop">Popular</div>
+				<div class="price">$4,000</div>
+				<ul>
+					<li class="per">$100 service fee per month</li>
+					<li>7 printer stations</li>
+					<li>No accounts limit</li>
+					<li>Paper Sheets(10,000)</li>
+					<li>D90% discount for buying more printers.</li>
+					<li>Warranty Period:1 year</li>
+					<li><a href="#">Buy Now</a></li>
+				</ul>
+					
+				</div>
+			</div>
+			
+		</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

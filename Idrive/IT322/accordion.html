@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<style type="text/css">
+#container {
+    margin-top: 123px;
+    margin-right: 123px;
+    margin-bottom: 123px;
+    margin-left: 123px;
+}
+</style>
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Starter Page</title>
+
+<
+<!-- Load the base jquery code from the jquery Content Distribution Network (CDN) -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+<!-- Load the codes necessary to migrate from an earlier version (optional) -->
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script>
+<!-- Load the jquery UI library from the CDN -->
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>		
+<!-- Load a basic stylesheet for structure and theme -->
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css">
+<!-- take out the "base" in the line above and replace it with any of the following for different themes:
+	base 				ui-lightness		
+    ui-darkness			smoothness
+    start				humanity 
+    redmond				hot-sneaks
+    sunny				overcast					
+    blitzer				vader
+    le-frog				dot-luv
+    flick				mint-choc
+    pepper-grinder		black-tie
+    eggplant			trontastic
+    dark-hive			swanky-purse			
+    cupertino			south-street
+    excite-bike
+-->
+<script>
+	$(function(){
+	$("#myaccordion").accordion({event:"mouseover"});
+	});
+	</script>
+
+
+	</head>
+
+<body>
+<div id="container">
+  <div id="myaccordion">
+    <h3>First</h3>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ea nobis nesciunt dolor qui, repudiandae hic, tempora odit esse error pariatur velit iure omnis soluta nulla.</div>
+  <h3>Second</h3>
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore, soluta vitae, nemo consequuntur quae.</div>
+  <h3>Third</h3>
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos consequatur libero ad consequuntur fuga dolorem magnam molestias, asperiores, voluptate harum ratione quibusdam id nemo blanditiis iste accusantium voluptatem hic quas. Vel ipsum perferendis, deserunt ratione quod consectetur possimus consequatur doloremque qui iusto blanditiis voluptatibus exercitationem, eligendi similique suscipit aperiam. Soluta sequi perferendis voluptatem, porro id! Explicabo, exercitationem, eligendi. Accusantium modi dolorum repellendus eveniet deleniti quis aut corporis aliquam debitis non architecto inventore soluta voluptatem, illo eius?</div>
+</div>
+	</div>
+</body>
+</html>

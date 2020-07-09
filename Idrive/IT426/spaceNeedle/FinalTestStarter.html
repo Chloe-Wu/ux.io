@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Nautilus</title>
+<style type="text/css">
+#container {
+	position: absolute;
+	left: 100px;
+	top: 50px;
+}
+#picMask {
+	width: 500px;
+	height: 545px;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y:hidden;
+}
+#picHolder {
+	position: relative;
+}
+#theTitle{
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-size: xx-large;
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+	<div id="theTitle" onmousemove="doTheTitle()">The Nautilus</div>
+	<div id="picMask" onmousemove="getMoving(event)">
+		<div id="picHolder"><img  id="Nautilus" src="NautilusPlanLarge.jpg" width="2000" height="545"   alt=""/>
+        </div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+var currentPosition = 0;
+
+function getMoving(event) { 
+var currentX = event.clientX - 100; 
+if (currentX < 250 && currentPosition > -1500)
+{currentPosition = currentPosition -2;} 
+else if(currentX >250 && currentPosition< 0)
+{currentPosition = currentPosition +2;} 
+document.getElementById('picHolder').style.left = currentPosition + 'px';
+}
+    
+function doTheTitle(){ switch(true){
+case (currentPosition < 0 && currentPosition > -500): titleText = "The Nautilus";
+break;
+case (currentPosition < -501 && currentPosition > -1000):
+titleText = "<span style = color:slategrey>from Disney's 20,000 Leagues under the Sea</span>";
+break; (more code here)
+}
+theTitle.innerHTML=titleText;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2020-01-21T17:50:46">
+<task>
+<img>1.jpg</img>
+<title>Scope and targets of the project</title>
+<status>Completed</status>
+<desc>Create a single webpage that identifies the subject and scope of your final project and defines the two demographic groups it targets. Include at least three ways that the page design will differ between the two sites. </desc>
+<finishDate>Feb 20,2020</finishDate>
+<link>www.cwu.edu</link>
+</task>
+<task>
+<img>1.jpg</img>
+<title>The layout of level 1</title>
+<status>Completed</status>
+<desc>Create a working model for each of the two websites included in the final project. Content (static or dynamic) does not have to be complete, but all jQuery effects and elements should be included. 
+</desc>
+<finishDate>March 1,2020</finishDate>
+<link></link>
+</task>
+<task>
+<img>2.jpg</img>
+<title>The layout of level 2</title>
+<status>Not yet</status>
+<desc>Create a working model for each of the two websites included in the final project. Content (static or dynamic) does not have to be complete, but all jQuery effects and elements should be included. 
+</desc>
+<finishDate>March 3,2020</finishDate>
+<link></link>
+</task>
+<task>
+<img>2.jpg</img>
+<title>Update and link to the index</title>
+<status>Not yet</status>
+<desc>Two distinct websites have been created, both covering the same subject. Each of the two websites is designed
+to address a unique target audience.Each website contains enough pages to adequately demonstrate how the target audience would use the site. The
+two websites may share the same content, but all text content must be original to the sites</desc>
+<finishDate>March 12,2020</finishDate>
+<link></link>
+</task>
+</dataroot>

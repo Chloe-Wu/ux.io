@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Basic Site Starter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="picLinks.js"></script>
+<style>
+	#titleImg
+	{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+    width: 100%;
+	background-position: center;
+    position: relative;
+	}
+	img{
+		width:auto;		
+		height:auto;
+		max-width: 100%;
+		max-width: 100%;
+	}
+</style>
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1> Apollo</h1>
+</div>
+<div role="main" class="ui-content">
+	<div id="titleImg"><img src="ApolloTitle.jpg" alt="/"></div>
+    The Apollo missions had a single purpose. President John F. Kennedy set the goal in a speech to a joint session of Congress on May 25, 1961.
+    "First, I believe that this nation should commit itself to achieving the goal, before this decade is out, of landing a man on the moon and returning him safely to the earth. No single space project in this period will be more impressive to mankind, or more important for the long-range exploration of space; and none will be so difficult or expensive to accomplish."
+	<a href="#page1" class="ui-btn">More</a>
+</div>
+<div data-role="footer">
+	<h4>1969-1972</h4>
+</div>
+</div>
+
+<div data-role="page" id="page1">
+<div data-role="header">
+<a href="#page" class=" ui-btn ui-btn-left ui-icon-alert ui-btn-icon-left">Flights</a>
+	<h1>Manned Apollo Mission</h1>
+</div>
+<div id="content">
+	<p>Content for Page One</p>
+</div>
+<div data-role="footer">
+<h4>1969-1972</h4>
+</div>
+</div>
+
+<div data-role="page" id="page2">
+<div data-role="header">
+<a href="#page1" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Flights</a>
+	<h1>Manned Apollo Mission</h1>
+</div>
+<div class="ui-content" role="main">
+	<div id="flightName"></div>
+	<div id="thePic"></div>
+	<div id="crewInfo"></div>
+</div>
+<div data-role="footer">
+<h4>1969-1972</h4>
+</div>
+</div>
+
+</body>
+</html>

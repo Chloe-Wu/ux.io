@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Midterm</title>
+</head>
+<body>
+<div id="title"><h2>Miles To Kilometers (Or Kilometers To Miles)</h2></div><br>
+<div id="converter">
+<label>Distance in Miles or Kilomiles:</label>
+<input id="input" type="text" placeholder="Enter a number"><br>
+<br><div id="controls">
+	<select name = "dropConvert" id="dropConvert" onchange="GetValue(this)">
+		<option value="">Choose a conversion</option>
+		<option value="1">Miles To Kilometers</option>
+		<option value="2">Kilometers To Miles</option>
+
+	</select>
+	</div><br>
+
+<div id="output"></div>
+</div><br>
+<div id="footer">@Y.W</div>
+	
+	
+<script type="text/javascript">
+
+//set up variables
+var userInput = 0 ;
+var ip = document.getElementById("input");
+var op = document.getElementById("output");
+
+//caculation
+function GetValue(dropConvert) 
+				{
+        var selectedText = dropConvert.options[dropConvert.selectedIndex].innerHTML;
+        var selectedValue = dropConvert.value;
+	
+	if (selectedValue == "1")
+	{	
+		userInput = parseFloat(ip.value);
+		KM = userInput*1.609344
+		op.innerHTML += userInput + " Miles is "+ KM.toFixed(2)+ " Kilometers<br>";
+	}
+
+	else if (selectedValue == "2")
+	{
+		userInput = parseFloat(ip.value);
+		M = userInput*.62137119
+		op.innerHTML += userInput + " Kilometers is "+M.toFixed(2)+ " Miles<br>";
+	}
+    } 
+	
+</script>
+</body>
+</html>

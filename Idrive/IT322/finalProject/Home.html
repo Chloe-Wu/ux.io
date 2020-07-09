@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name-"keyword" content="The home page of Easyprint">
+<meta name="description" content="The page has the download button of the app.">
+<title>Untitled Document</title>
+<link href="project.css" rel="stylesheet" type="text/css">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+<!-- Load the codes necessary to migrate from an earlier version (optional) -->
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script>
+<!-- Load the jquery UI library from the CDN -->
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>		
+<!-- Load a basic stylesheet for structure and theme -->
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script>
+	$(this).click(function() {
+	  $("#effect").toggle( "explode",{pieces:16},"slow" );
+	});
+	</script>
+</head>
+
+<body>
+	<div id ="navbar">
+		<div class="Name">EASYPRINT</div>
+			<nav>
+				<ul class="navlink">
+			<li><a href ="#">Home</a></li>
+			<li><a href ="Tutorial.html">How It Works</a></li>
+					
+			<li class="dropdown"><a href ="#" class="drop">Services</a>
+					  <div class="dropdown-content">
+    					<a href="individual.html">Individual</a>
+    					<a href="business.html">Entertainment</a></div>
+  					</li>
+						
+			
+				</ul>
+			</nav>
+			<a class="cta" href="#"><button>Contact</button></a>
+	</div>
+		<div id="wrapper">
+		<div id="cover">
+			<br>
+			<div id="text"><a class="link slogan" href="#" data-letter="Make your life Easy"><span>Make</span><span> Your Life</span><span> Easy</span></a></div>
+			<br><br><br><br>
+		<div class="imgFrame">
+			
+			<img id="effect"src="image/icon.png" height="180px" width="180px" alt="">
+		
+		<br><br>
+		<button id="Download">Download</button>
+		</div>
+		<p style="margin:2% 20%;color:white; ">There are more than 500 entertainments join our plans</p>
+		<p style="margin:2% 20%;color:white; ">Approximately&nbsp; 10,000 users download and use Easyprint service.</p>
+		<p style="margin:2% 20%;color:white; ">2020. 3. 11</p>
+        </div>
+			<div id="columns">
+				<div class="char">
+				<h2>Fast</h2>
+				<p>The print station works 24/7&nbsp;</p>
+				<p>&nbsp;</p>
+              </div>
+			<div class="char">
+				<h2>Easy</h2>
+				<p>Choose the file you want from any of your device, and print it directly.&nbsp;</p>
+			</div>
+			<div class="char">
+				<h2>Cheap</h2>
+				<p>The price we set is much lower than other vendors such as the copy shop or at home.</p>
+			</div>
+			<div class="char">
+				<h2>Efficient</h2>
+			  <p>Whenever you want,</p>
+			  <p>wherever you are,</p>
+				<p>you can print pages for your study or work.&nbsp;</p>
+            </div>
+			</div>
+			</div>
+		<div id="footer">&copy;Yiwei.W 2020</div>
+	
+</body>
+</html>

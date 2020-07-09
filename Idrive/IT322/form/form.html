@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Starter Page</title>
+<!-- Load the base jquery code from the jquery Content Distribution Network (CDN) -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+<!-- Load the codes necessary to migrate from an earlier version (optional) -->
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script>
+<!-- Load the jquery UI library from the CDN -->
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>		
+<!-- Load a basic stylesheet for structure and theme -->
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- take out the "base" in the line above and replace it with any of the following for different themes:
+	base 				ui-lightness		
+    ui-darkness			smoothness
+    start				humanity 
+    redmond				hot-sneaks
+    sunny				overcast					
+    blitzer				vader
+    le-frog				dot-luv
+    flick				mint-choc
+    pepper-grinder		black-tie
+    eggplant			trontastic
+    dark-hive			swanky-purse			
+    cupertino			south-street
+    excite-bike
+-->
+</head>
+
+<body>
+<div id="container">
+	<div id="header"><h1>Cruise with us</h1></div>
+	<form id="form1" name="form1" method="post">
+	  <p><label for="textfield">First Name:</label>
+      <input type="text" name="firstName" id="firstName" placeholder="Your first name" required></p>
+	  <p><label for="textfield">Last Name:</label>
+      <input type="text" name="lastName" id="lastName" placeholder="Your last name" required></p>
+	<p>
+	  <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="xxx@xxx.xxx" required>
+	</p>
+		<p>
+		<label for="departure">Date of Departure:</label>
+      <input type="text" name="departuare" id="departuare" placeholder="" required>
+		</p>
+		<p>Pick an Ocean:</p>
+	  <div id ="radioGroup">
+  <label>
+    <input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0">
+    Alantic</label>
+  <br>
+  <label>
+    <input type="radio" name="RadioGroup1" value="2" id="RadioGroup1_1" checked>
+    Pacific</label>
+  <br>
+  <label>
+    <input type="radio" name="RadioGroup1" value="3" id="RadioGroup1_2">
+    India</label>
+  <br>
+  <label>
+    <input type="radio" name="RadioGroup1" value="4" id="RadioGroup1_3">
+    Arctic</label>
+		<p>
+  <label for="numberOfDays">Length of Cruise (in days):</label>
+  <input type="text" name="numberOfDays" id="numberOfDays" placeholder="3">
+</p>
+<p>Number of Passengers:</p>
+<p>
+  <input type="text" id="slideValue" readonly/></p>
+	<div id ="mySlider"></div>
+	<input type="submit" name="button" id="button" value="submit">		
+</form>
+</div>
+	<script>
+	$(document).ready(function(){
+		$('#departure').datepicker({chnangeMouth:true,changeYear:true, showButtonPanel:true, showAnim:"slide"});
+		$("#radioGroup").controlgroup();
+		$("#numberOfDays").spinner({min:3,max:20});
+		$('#mySlider').slider({value:1,min:0,max20,step:1, orientation:'horizonal'});
+	</script>
+</body>
+</html>

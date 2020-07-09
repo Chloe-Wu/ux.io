@@ -1,0 +1,27 @@
+@charset "utf-8";
+#title {
+    background-color: #4E3D43;
+    color: #DFCDD9;
+    min-height: 48px;
+    font-variant: normal;
+    font-size: 75px;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+#tabs{
+	background-color: #956683;
+	font-family: 'Barlow', sans-serif;
+}
+#product1{
+	font-family: 'Roboto', sans-serif;
+}
+#footer{
+	background-color:#4E3D43;	
+	color:#DCE0F1;
+	text-align:center;
+}
+#colunms{
+	max-width:80%;
+	
+}
+

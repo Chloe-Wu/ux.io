@@ -1,0 +1,17 @@
+@charset "utf-8";
+#footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
+#contanier {
+    width: 650px;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+#title {
+    padding-top: 10px;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 32px;
+}

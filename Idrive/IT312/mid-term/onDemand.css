@@ -1,0 +1,149 @@
+@charset "utf-8";
+#footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    background-image: url(images/background.jpg);
+    width: 90%;
+    color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0%;
+}
+#title {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    background-color: #060000;
+    border-color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 16px;
+    word-spacing: 20px;
+}
+.leftCol {
+    float: left;
+    text-align: left;
+    padding-top: 26px;
+    font-size: 25px;
+    width: 39%;
+    margin-left: 50px;
+}
+.button5 {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    margin-left: 49px;
+    background-color: #000000;
+    padding-top: 11px;
+    padding-right: 20px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    color: #FFFFFF;
+    border: 2px solid #0B0D1B;
+    margin-right: -55px;
+    text-align: center;
+    background-size: cover;
+}
+.button1 {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    margin-left: 49px;
+    background-color: #000000;
+    padding-top: 11px;
+    padding-right: 20px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    color: #FFFFFF;
+    border: 2px solid #0B0D1B;
+    margin-right: -55px;
+    text-align: center;
+    background-image: url(images/firenze.jpg);
+    background-size: cover;
+}
+.button2 {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    margin-left: 49px;
+    background-color: #000000;
+    padding-top: 11px;
+    padding-right: 20px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    color: #FFFFFF;
+    border: 2px solid #0B0D1B;
+    margin-right: -55px;
+    text-align: center;
+    background-image: url(images/toyCars.jpg);
+    background-size: cover;
+}
+.button3 {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    margin-left: 49px;
+    background-color: #000000;
+    padding-top: 11px;
+    padding-right: 20px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    color: #FFFFFF;
+    border: 2px solid #0B0D1B;
+    margin-right: -55px;
+    text-align: center;
+    background-image: url(images/agora.jpg);
+    background-size: cover;
+}
+.button4 {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    margin-left: 49px;
+    background-color: #000000;
+    padding-top: 11px;
+    padding-right: 20px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    color: #FFFFFF;
+    border: 2px solid #0B0D1B;
+    margin-right: -55px;
+    text-align: center;
+    background-image: url(images/cannonBeach1.jpg);
+    background-size: cover;
+}
+.button1:hover {
+    background-color: hsla(0,0%,100%,0.17); /* Green */
+    color: white;
+	border: 2px solid hsla(214,38%,18%,0.02);
+}
+#container .button {
+}
+.rightCol {
+    width: 40%;
+    float: left;
+    padding-left: 64px;
+    margin-left: 12px;
+}
+.clearIt {
+    clear: left;
+}
+#container #bigPic {
+    padding-left: 50px;
+}

@@ -1,0 +1,99 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+  <script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+      // Setup and draw the charts
+      function drawChart() {
+		// Create the first chart - Inventory by Breed
+		// Convert the array created by the program into a form the chart can use 
+		var petString = "[";
+		for (var i=0; i<pets.length; i++)
+		  {petString += "['"+pets[i].breed+"',"+pets[i].amount+"],";}
+		petString = petString.substring(0, petString.length-1)+"]";
+		// Create the data for the chart
+		var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Inventory by Breed');
+        data.addColumn('number', 'In stock:');
+		data.addRows(eval(petString));
+
+        // Set chart options
+        var options = {'title':'Inventory by Breed',
+                       'width':400,
+                       'height':300};
+
+        // Draw the first chart using the data and options
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+		
+		// Now create the second chart - Inventory by Type
+		// Set variables
+		var typeString = "";
+		var countMammal = 0;
+		var countReptile = 0;
+		var countBird = 0;
+		var countFish = 0;
+		// Loop through the objects in the pets array
+		for (var i=0; i<pets.length; i++)
+		{ 	  
+		 switch(pets[i].type)
+		 {
+		  case "Fixed Units":
+		  	countMammal++;
+			break;
+		  case "Fixed Work":
+		  	countBird++;
+		  	break;
+		  case "Fixed Duration":
+		  	countFish++;
+		  }
+		}
+		var typeString="[['Mammals',"+countMammal+"],['Birds',"+countBird+"],['Fish',"+countFish+"]]";
+
+		// Create the data for the chart
+  		var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Inventory by Breed');
+        data.addColumn('number', 'In stock:');
+        data.addRows(eval(typeString));
+		
+        // Set chart options
+        var options = {'title':'Inventory by Type',
+                       'width':400,
+                       'height':300};
+
+        // Draw the second chart using the data and options
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div2'));
+        chart.draw(data, options);	
+      }
+    </script>
+    <html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

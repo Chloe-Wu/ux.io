@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Computers of the Future</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="themes/bp.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<script src="COTF_ViewModel.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1>Computers of<br>the Future</h1>
+</div>
+<div class="ui-content" role="main">
+  <div id="inventoryList" data-role="listview" data-filter="true"></div>
+  </div>
+<div data-role="footer" data-position="fixed">
+	<h4>Inventory</h4>
+</div>
+</div>
+
+<div data-role="page" id="page1">
+<div data-role="header">
+<a href="#page" class="ui-btn  ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Computers of<br>the Future</h1>
+</div>
+<div class="ui-content">
+<div id="thePic">Pic</div>
+<div>The <span id="theModel"> </span> computer, manufactured by <span id="theBrand"> </span> is only $<span id="theCost"> </span> at Computers of the Future.</div>
+</div>
+<a href="#page2" class="ui-btn">Calculate Payments</a>
+<div data-role="footer" data-position="fixed">
+<h4><span id="footerText"> </span></h4>
+</div>
+</div>
+
+<div data-role="page" id="page2">
+<div data-role="header">
+<a href="#page" class="ui-btn  ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Computers of<br>the Future</h1>
+</div>
+<div class="ui-content" role="main">
+<div id="theSmallPic">Pic</div>
+   <div class="ui-field-contain">
+      <label for="P">The <span id="CompName"> </span> costs:</label>
+      <input type="number" name="P" id="P" data-clear-btn="true"  placeholder="Very Expensive!">
+      </div>
+      <div class="ui-field-contain">
+      <label for="T">Sales Tax Rate:</label>
+      <input type="number" name="T" id="T" readonly >
+      </div>
+      <div class="ui-field-contain">
+      <label for="R">Annual Percentage Rate:</label>
+      <input type="number" name="R" id="R" readonly >
+      </div>
+      <div class="ui-field-contain">
+      <label for="N">Number of Monthly Payments:</label>
+      <input type="number" name="N" id="N" data-clear-btn="true">
+    </div>
+    <p>
+      <a href="#" class="ui-btn" id="calcButton">Calculate</a>
+    </p>
+  <div id="Answer"></div>
+<p><a class = "ui-btn ui-btn-inline" href="#rightPanelOverlay" >Disclaimer</a><a class = "ui-btn ui-btn-inline" href="#rightPanelReveal" >Policy</a>
+	<a class = "ui-btn ui-btn-inline" href="#rightPanelPush" >Customer Service</a> </p>
+  <div id="rightPanelOverlay" data-role="panel" data-position="right" data-display="overlay" data-position-fixed="true">
+    <div>
+      <p>If customers find the information is wrong, they can suggest to this website to modify or delete it. This website will promptly correct or delete the incorrect information.</p>
+    </div>
+    <a href="#theContent" class="ui-btn" data-rel="close">Close panel</a> 
+	</div>
+  <div id="rightPanelReveal" data-role="panel" data-position="right" data-display="reveal" data-position-fixed="true">
+    <div>
+      <p>You may not use any COTF Service if you are the subject of U.S. sanctions or of sanctions consistent with U.S. law imposed by the governments of the country where you are using COTF Services. You must comply with all U.S. or other export and re-export restrictions that may apply to goods, software, technology, and services.</p>
+    </div>
+    <a href="#theContent" class="ui-btn" data-rel="close">Close panel</a> 
+	</div>
+	  <div id="rightPanelPush" data-role="panel" data-position="right" data-display="push" data-position-fixed="true">
+    <div>
+      <p><ul>
+		<li>Staff members are responsible for providing the best customer service possible and are empowered to make decisions that will ensure the best experience for each customer.</li><br>
+		<li>When answering the phone, an employee will identify him or her self and the department in which (s)he works. </li><br>
+		<li>Staff will assist customers on a first come, first served basis to the extent possible without infringing on the service needs of other customers. </li><br>
+		<li>A customer with complaints about the service received or about COTF policy shall be referred to the online staff on duty at the time or to the customer service. </li>
+		</ul></p>
+    </div>
+    <a href="#theContent" class="ui-btn" data-rel="close">Close panel</a> 
+	</div>
+	<label>
+		<p>Contact Us:</p>
+		<p>Call: 509-080-4227</p>
+		<p>E-mail: customerservice@cotf.com</p>
+	</label>
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Payment Calculator</h4>
+</div>
+</div>
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2020-01-21T17:50:46">
+<apollo>
+<ID>1</ID>
+<Flight>Aries</Flight>
+<Year>1967</Year>
+<LaunchVehicle>Saturn IB</LaunchVehicle>
+<Spacecraft>Apollo CSM</Spacecraft>
+<Crew>Virgil Grissom, Edward White, Roger Chaffee</Crew>
+<Notes></Notes>
+<Patch>1.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/aries-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>2</ID>
+<Flight>Taurus</Flight>
+<Year>1968</Year>
+<LaunchVehicle>Saturn IB</LaunchVehicle>
+<Spacecraft>Apollo CSM</Spacecraft>
+<Crew>Walter Schirra, Donn Eisele,  Walt Cunningham</Crew>
+<LaunchDate>10/11/1968</LaunchDate>
+<LandingDate>10/22/1968</LandingDate>
+<Duration>10.84 days</Duration>
+<Notes></Notes>
+<Patch>2.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/taurus-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>3</ID>
+<Flight>Gemini</Flight>
+<Year>1968</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM</Spacecraft>
+<Crew>Frank Borman, William Anders,   James Lovell</Crew>
+<LaunchDate>12/21/1968</LaunchDate>
+<LandingDate>12/27/1968</LandingDate>
+<Duration>6.13 days</Duration>
+<Notes></Notes>
+<Patch>3.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/gemini-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>4</ID>
+<Flight>Cancer</Flight>
+<Year>1969</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>James McDivitt, David Scott, Russell Schweickart</Crew>
+<LaunchDate>3/3/1969</LaunchDate>
+<LandingDate>3/13/1969</LandingDate>
+<Duration>10.04 days</Duration>
+<Notes></Notes>
+<Patch>4.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/cancer-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>5</ID>
+<Flight>Leo</Flight>
+<Year>1969</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>Eugene Cernan, John Young, Thomas Stafford</Crew>
+<LaunchDate>5/18/1969</LaunchDate>
+<LandingDate>5/26/1969</LandingDate>
+<Duration>8.00 days</Duration>
+<Notes></Notes>
+<Patch>5.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/leo-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>6</ID>
+<Flight>Virgo</Flight>
+<Year>1969</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>Neil Armstrong, Edwin Aldrin, Michael Collins</Crew>
+<LaunchDate>7/16/1969</LaunchDate>
+<LandingDate>7/24/1969</LandingDate>
+<Duration>8.14 days</Duration>
+<Notes></Notes>
+<Patch>6.png</Patch>
+<TheLink>hhttps://www.constellation-guide.com/constellation-list/virgo-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>7</ID>
+<Flight>Libra</Flight>
+<Year>1969</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>Charles Conrad, Richard Gordon, Alan Bean</Crew>
+<LaunchDate>11/14/1969</LaunchDate>
+<LandingDate>11/24/1969</LandingDate>
+<Duration>10.19 days</Duration>
+<Notes></Notes>
+<Patch>7.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/libra-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>8</ID>
+<Flight>Scorpio</Flight>
+<Year>1970</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>James Lovell, Fred Haise, Jack Swigert</Crew>
+<LaunchDate>4/11/1970</LaunchDate>
+<LandingDate>4/17/1970</LandingDate>
+<Duration>5.95 days</Duration>
+<Notes></Notes>
+<Patch>8.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/scorpius-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>9</ID>
+<Flight>Sagittarius</Flight>
+<Year>1971</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>Alan Shepard, Stuart Roosa, Edgar Mitchell</Crew>
+<LaunchDate>1/31/1971</LaunchDate>
+<LandingDate>2/9/1971</LandingDate>
+<Duration>9.00 days</Duration>
+<Notes></Notes>
+<Patch>9.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/sagittarius-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>10</ID>
+<Flight>Capricorn</Flight>
+<Year>1971</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM, LEM &amp; LRV</Spacecraft>
+<Crew>David Scott, James Irwin, Alfred Wordon</Crew>
+<LaunchDate>7/26/1971</LaunchDate>
+<LandingDate>8/7/1971</LandingDate>
+<Duration>12.30 days</Duration>
+<Notes></Notes>
+<Patch>10.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/capricornus-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>11</ID>
+<Flight>Aquarius</Flight>
+<Year>1972</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM, LEM &amp; LRV</Spacecraft>
+<Crew>John Young, Thomas Mattingly, Charles Duke</Crew>
+<LaunchDate>4/16/1972</LaunchDate>
+<LandingDate>4/27/1972</LandingDate>
+<Duration>11.08 days</Duration>
+<Notes></Notes>
+<Patch>11.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/aquarius-constellation.html</TheLink>
+</apollo>
+<apollo>
+<ID>12</ID>
+<Flight>Pisces</Flight>
+<Year>1972</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM, LEM &amp; LRV</Spacecraft>
+<Crew>Eugene Cernan, Ronald Evans, Harrison Schmitt</Crew>
+<LaunchDate>12/7/1972</LaunchDate>
+<LandingDate>12/19/1972</LandingDate>
+<Duration>12.58 days</Duration>
+<Notes></Notes>
+<Patch>12.png</Patch>
+<TheLink>https://www.constellation-guide.com/constellation-list/pisces-constellation.html</TheLink>
+</apollo>
+</dataroot>

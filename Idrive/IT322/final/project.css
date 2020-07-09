@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	background-color:#24252A;
+	color: #ECF0F1;
+}
+
+#navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:30px 10%;
+}
+.navlink{
+	list-style: none;
+}
+.Name,a,li,button{
+	font-family: "Montserrat",sans-serif;
+	font-weight: 500;
+	font-size:16px;
+	color:#ECF0F1;
+	text-decoration:none;
+}
+.Name{
+	font-size: 20px;
+}
+.navlink li{
+	display:inline-block;
+	padding:0px 20px;
+}
+.navlink li a{
+	transition: all 0.3s ease 0s;
+}
+.navlink li a:hover{
+	color:#0088a9;
+}
+button{
+	background-color: rgba(0,136,169,1);
+	border:none;
+	border-radius:50px;
+	cursor:pointer;
+	padding: 10px 20px;
+	margin: 15px;
+	transition: all 0.3s ease 0s;
+}
+button:hover{
+	background-color: rgba(0,136,169,0.6);
+}
+#wrapper{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#cover{
+	background-image: url("../finalProject/image/outlook.jpeg");
+}
+.char{
+	width:25%;
+	float:left;
+}
+#imgFrame{
+	text-align: center;
+	vertical-align: middle;
+}

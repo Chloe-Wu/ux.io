@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Basic Site Starter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+    $.ajax({
+		url:"tripsList.xml",
+		cache:false,
+		dataType:"xml",
+        success: function(xml) {
+			$("#page1").empty();
+			//find each record friends is the name of the table
+			$(xml).find ("tour").each(function(){
+				//create the set of data using the fields in the xml
+				var info = '<a href="#page1"><img src='
+				+$(this).find("pic").text()+
+				+' alt="'
+				+'<h1>'$(this).find("model").text()
+				+' </h1>'
+				+'Cost:'
+                +$(this).find("cost").text()
+                +'<p>Tourstops:'
+                +$(this).find("Notes").text()
+				+'</p></a>'              
+				//add the info to the div on the page
+				$("#page1").append(info);
+			});
+        }
+});
+  });      
+    </script>
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1>Beautiful<br>Italy Tours&nbsp;</h1>
+</div>
+<div role="main" class="ui-content">
+	<ul data-role="listview" data-filter="true">
+    <div id="page1"><a href="#page1"></a>
+    <li><a href="#page2">
+	</a></li>
+		
+
+    <li><a href="#page3">
+	</a></li>
+    <li><a href="#page4">
+	</a></li>
+        </div>
+    </ul>
+	
+</div>
+<div data-role="footer">
+	<h4>@Yiwei.W&nbsp;</h4>
+</div>
+</div>
+</body>
+</html>

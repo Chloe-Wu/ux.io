@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget xmlns="http://openajax.org/metadata" spec="1.0" name="cafe" version="1">
+
+<description type="text/html"><![CDATA[Widget Exported from Flash Professional]]></description>
+
+<category name="Flash Animation"/>
+<remarks>Compatible with: InDesign CC, Dreamweaver CC, Muse</remarks>
+<icon src="PosterImg_690.png" width="300" height="600"/>
+<require type="other" src="Untitled-1.html"/>
+<require type="javascript" src="Untitled-1.js"/>
+<require type="image" src="images/._cafe.jpg"/>
+<require type="other" src="images/._cafe.psd"/>
+<require type="image" src="images/._cafeName.jpg"/>
+<require type="image" src="images/._cake.jpg"/>
+<require type="image" src="images/._Cappuccino.jpg"/>
+<require type="image" src="images/._hotChoc.jpg"/>
+<require type="image" src="images/._macchiato.jpg"/>
+<require type="image" src="images/._Mocha.jpg"/>
+<require type="image" src="images/cafe.jpg"/>
+<require type="other" src="images/cafe.psd"/>
+<require type="image" src="images/cafeName.jpg"/>
+<require type="image" src="images/cake.jpg"/>
+<require type="image" src="images/Cappuccino.jpg"/>
+<require type="image" src="images/cars.jpg"/>
+<require type="image" src="images/hotChoc.jpg"/>
+<require type="image" src="images/macchiato.jpg"/>
+<require type="image" src="images/Mocha.jpg"/>
+<require type="image" src="images/titleMidterm.jpg"/>
+<require type="other" src="images/titleMidterm.psd"/>
+<require type="image" src="images/tourhome.jpg"/>
+<require type="image" src="images/Untitled_1_atlas_.png"/>
+<require type="image" src="images/Untitled_3_atlas_.png"/>
+<require type="image" src="images/Venice1.jpg"/>
+<require type="image" src="images/Venice2.jpg"/>
+<require type="folder" src="images"/>
+<content></content>
+
+<properties name="Properties">
+<property name="default-width" defaultValue="300" hidden="true"/>
+<property name="default-height" defaultValue="600" hidden="true"/>
+<property name="resizable" defaultValue="false" hidden="true"/>
+<property name="centering" defaultValue="" hidden="true"/>
+<property name="scaling" defaultValue="" hidden="true"/>
+<property name="html-page" defaultValue="Untitled-1.html" hidden="true"/>
+<property name="target-platform" defaultValue="htmlcanvas" hidden="true"/>
+<property name="created-in" defaultValue="Adobe Animate CC" hidden="true"/>
+</properties>
+
+</widget>

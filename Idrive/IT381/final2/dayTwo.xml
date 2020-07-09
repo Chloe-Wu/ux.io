@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<excursion>
+<ID>1</ID>
+<tourName>Chicken Nuggets</tourName>
+<length>Made from either meat slurry and chicken breasts cut to shape, breaded or battered, then deep-fried or baked. </length>
+<price>$10.50</price>
+<visit><![CDATA[<br>&#8226; 4 pc <br>&#8226; 8 pc<br>&#8226; 16 pc]]>
+</visit>
+<pic>nuggets.jpg</pic>
+</excursion>
+<excursion>
+<ID>2</ID>
+<tourName>French Fries</tourName>
+<length>Slice potatoes into French fries, and place into cold water so they won't turn brown while you prepare the oil. Heat oil in a large skillet over medium-high heat. While the oil is heating, sift the flour, garlic salt, onion salt, (regular) salt, and paprika into a large bowl.</length>
+<price>$3.50</price>
+<visit><![CDATA[<br>&#8226; 320 Cal.<br>&#8226; 490 Cal.<br>&#8226; 630 Cal.]]>
+</visit>
+<pic>frenchFries.jpg</pic>
+</excursion>
+<excursion>
+<ID>3</ID>
+<tourName>Onion Rings</tourName>
+<length>Heat the oil in a deep-fryer to 365 degrees F (185 degrees C). Separate the onion slices into rings, and set aside. Dip the onion slices into the flour mixture until they are all coated; set aside. Deep fry the rings a few at a time until golden brown.</length>
+<price>$3.50</price>
+<visit><![CDATA[<br>&#8226; Large<br>&#8226; Medium<br>&#8226; Small]]>
+</visit>
+<pic>onionRings.jpg</pic>
+</excursion>
+</dataroot>

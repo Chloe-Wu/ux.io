@@ -1,0 +1,110 @@
+#html,body{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+	height:auto;
+}
+.slogan{
+	width: 33.3%;
+    float: left;
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+	padding-left: 20px;
+    margin-top: 25px;
+    vertical-align: bottom;
+	font-family: 'Advent Pro', sans-serif; 
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#NAME{
+    transition: 0.4s;
+    width: 33.3%;
+    float: left;
+    font-size: 40px;
+    margin-top: 20px;
+    font-style: normal;
+	text-align: center;
+	vertical-align: center;
+    font-family: 'Tangerine', cursive;
+	text-decoration: none;
+	color: #000000;
+	letter-spacing:.08em;
+}
+
+.nav{
+    width: 33.3%;
+    margin-left: 66%;
+    margin-top: 30px;
+	
+}
+.nav a{
+
+    padding-left: 8%;
+    font-family: 'Advent Pro', sans-serif;
+    //font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        font-weight: 700;
+    color: #DCD0D0;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+	font-size: 15px;
+	vertical-align: bottom;
+    transition: .2s ease-in;
+}
+.nav a:hover{
+    text-decoration: none;
+    color: #373737;
+    text-align: center;
+}
+#navbar{
+    transition: 0.5s;
+    //background-color: rgba(255, 255, 255, 0.97);
+    position: fixed;
+    padding: 60px 10px;
+    width: 100%;
+    float: left;
+    //border-bottom: 1px solid hsla(0,0%,70%,0.68);
+	z-index: 1;
+    // -webkit-box-shadow: 8px 8px 20px hsla(0, 0%, 100%, 0);
+    //box-shadow: 3px 3px 20px hsla(0, 0%, 0%, 0.21);
+}
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  #navbar-right {
+    float: none;
+  }
+    #NAME{
+        width:70%;
+        font-size:20px;
+        float:left;
+        text-align: center;
+        margin-top:0px;
+    }
+    .slogan{
+         width:70%;
+        font-size:20px;
+        float:left;
+    }
+}
+
+#footer{
+    float: left;
+    text-align: center;
+    font-size: 22px;
+    font-family:'Tangerine', cursive;
+    font-weight: 100;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}

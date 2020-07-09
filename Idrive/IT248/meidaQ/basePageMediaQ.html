@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" />
+<title>Venice</title>
+<style type="text/css">
+#wrapper {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#title {
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-color: #000000;
+    background-image: url(DesktopTitle.jpg);
+    height: 110px;
+}
+#leftCol {
+    float: left;
+    width: 50%;
+    background-color: #CCC;
+}
+#rightCol {
+    float: left;
+    width: 50%;
+    background-color: #E8E2D2;
+}
+.clearIt {
+    clear: left;
+}
+
+p {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+#veniceImage {
+    height: 100%;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+#navbar {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+#navbar a {
+    text-decoration: none;
+    color: #070707;
+    width: 25%;
+    display: block;
+    float: left;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #E8E2D2;
+    -webkit-transition: background-color 500ms ease-out 0s;
+    -o-transition: background-color 500ms ease-out 0s;
+    transition: background-color 500ms ease-out 0s;
+}
+#colWrapper {
+    background-color: #E8E2D2;
+}
+
+
+@media (max-width:414px){
+#leftCol {
+	float: none;
+	width: auto;
+}
+#rightCol {
+	float: none;
+	width: auto;
+}
+#title {
+	background-image: url(PhoneTitle.jpg);
+	height: 39px;
+}
+p {
+	font-size: large;
+}
+#wrapper {
+	width: auto;
+	height: auto;
+}
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="title"></div>
+ <div id="navbar"><a href="#">Home</a> <a href="#">Sights</a> <a href="#">Food</a> <a href="#">Travel</a>
+    <div class="clearIt"></div>
+  </div>
+  <div id="colWrapper">
+    <div id="leftCol">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,   quis <img src="DeskVenice1.jpg" alt="" name="veniceImage" width="320" height="192" align="left" id="veniceImage" />nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum   dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div id="rightCol">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum   dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum   dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div class="clearIt"></div>
+  </div>
+</div>
+</body>
+</html>

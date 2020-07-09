@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Dicon</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        /* border: 1px solid blue; */
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #efeeee;
+    }
+    .container{
+        /* border: 1px solid green; */
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        display:flex;
+        width:700px;
+        height:700px;
+    }
+    .box{
+        /* border: 1px solid black; */
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap:124px;
+        row-gap:124px;
+    }
+    .box .icon{
+        /* border: 1px solid pink; */
+        width:110px;
+        height:110px;
+        display:grid;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .box .icon i{
+        box-shadow: 18px 18px 30px rgba(0,0,0,0.1),-18px -18px 30px rgba(255,255,255,1);
+        width:100px;
+        border-radius:20px;
+        height:100px;
+        display:grid;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #efeeee;
+        transition: border-shadow .2s ease-in-out;
+        position: relative;
+    }
+    .box .icon i:hover{
+        box-shadow: 0px 0px 0px rgba(0,0,0,0.1),0px 0px 0px rgba(255,255,255,1),
+        inset 18px 18px 30px rgba(0,0,0,0.1), inset -18px -18px 30px rgba(255,255,255,1);
+        transition: border-shadow .2s ease-in-out;
+    }
+    .box .icon i:hover i{
+        width:58px;
+        transition: border-shadow .2s ease-in-out;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="icon"><i class="fab fa-apple fa-3x"></i></div>
+            <div class="icon"><i class="fab fa-behance fa-3x"></i></div>
+            <div class="icon"><i class="fab fa-google fa-3x"></i></div>
+            <div class="icon"><i class="fab fa-microsoft fa-3x"></i></div>
+            <div class="icon"><i class="fab fa-amazon fa-3x"></i></div>
+            <div class="icon"><i class="fab fa-uber fa-3x"></i></div>
+            <div class="icon"><i class="fab fa-facebook-square fa-3x"></i></div>
+            <div class="icon"><i class="fab fa-fedex fa-3x"></i></div>
+            <div class="icon"><i class="fab fa-evernote fa-3x"></i></div>
+        </div>
+    </div>
+</body>
+</html>

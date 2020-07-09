@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2020-01-15T08:18:40">
+<friends>
+<ID>1</ID>
+<firstName>Chuck</firstName>
+<lastName>Wahle</lastName>
+<food>Lucky Charms</food>
+<pet>bird</pet>
+</friends>
+<friends>
+<ID>2</ID>
+<firstName>Sally</firstName>
+<lastName>Smythe</lastName>
+<food>pizza</food>
+<pet>none</pet>
+</friends>
+<friends>
+<ID>3</ID>
+<firstName>John</firstName>
+<lastName>Joneses</lastName>
+<food>candy</food>
+<pet>dog</pet>
+<ID>4</ID>
+<firstName>Johnny</firstName>
+<lastName>Smith</lastName>
+<food>popcorn</food>
+<pet>snake</pet>
+</friends>
+</dataroot>

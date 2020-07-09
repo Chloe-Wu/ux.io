@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@media (max-width : 375px ){
+#title {
+    font-size: 22px;
+}
+#container {
+}
+.button {
+    font-size: 8px;
+    margin-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: -32px;
+    border-color: #000000;
+    border-style: solid;
+}
+.leftCol {
+    font-size: 18px;
+    margin-top: -17px;
+    padding-left: 0px;
+    padding-right: 1px;
+}
+.rightCol {
+    font-size: 8px;
+    margin-left: -94px;
+    padding-left: 124px;
+}
+#footer {
+    font-size: 7px;
+}
+#bigPic {
+    padding-left: 0px;
+    margin-left: -22px;
+    margin-top: 17px;
+}
+}

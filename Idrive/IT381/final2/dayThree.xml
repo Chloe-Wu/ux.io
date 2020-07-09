@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<excursion>
+<ID>1</ID>
+<tourName>Soft Drink</tourName>
+<length>Small, medium or large size.</length>
+<price>$2.65</price>
+<visit><![CDATA[<br>&#8226; Coke<br>&#8226; Sprite<br>&#8226; Fanta<br>&#8226; Pepsi<br>]]>
+</visit>
+<pic>softDrink.jpg</pic>
+</excursion>
+<excursion>
+<ID>2</ID>
+<tourName>Lemonade</tourName>
+<length>Small, medium or large size.</length>
+<price>$3.43</price>
+<visit><![CDATA[<br>&#8226; Sweetened<br>&#8226; Unsweetend<br>]]>
+</visit>
+<pic>lemonade.jpg</pic>
+</excursion>
+<excursion>
+<ID>3</ID>
+<tourName>Iced Tea</tourName>
+<length>Small, medium or large size.</length>
+<price>$2.50</price>
+<visit><![CDATA[<br>&#8226; Sweetened<br>&#8226; Unsweetend<br>]]>
+</visit>
+<pic>icedTea.jpg</pic>
+</excursion>
+</dataroot>

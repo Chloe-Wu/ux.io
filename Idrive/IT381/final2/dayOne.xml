@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<excursion>
+<ID>1</ID>
+<tourName>Bacon Sandwich Meal</tourName>
+<length>A quarter-pounf of fresh, never -frozen beef topped with Applewood smoked bacon, chedder cheese, avocado and tomatoes.</length>
+<price>$10.50</price>
+<visit><![CDATA[<br>&#8226; Bacon Sandwich<br>&#8226; French Fries<br>&#8226; Medium Coke<br>]]>
+</visit>
+<pic>baconSandwich.jpg</pic>
+</excursion>
+<excursion>
+<ID>2</ID>
+<tourName>Double Quarter Pound Meal</tourName>
+<length>Two quarter pound* 100% Canadian beef patties. Layered with two slices of melty cheese, slivered onions and pickles on sesame seed bun.</length>
+<price>$11.50</price>
+<visit><![CDATA[<br>&#8226; Double Quarter Pound Burger <br>&#8226; Onion Rings<br>&#8226; Medium Coke<br>]]>
+</visit>
+<pic>doubleQuarter.jpg</pic>
+</excursion>
+<excursion>
+<ID>3</ID>
+<tourName>Spicy Whopper Meal</tourName>
+<length>The Whopper is a hamburger consisting of a flame-grilled 4 oz (110 g) beef patty, sesame seed bun, mayonnaise, lettuce, tomato, pickles, ketchup, and sliced onion. </length>
+<price>$12.50</price>
+<visit><![CDATA[<br>&#8226; Spicy Whopper Burger<br>&#8226; French Fries<br>&#8226; Medium Coke]]>
+</visit>
+<pic>spicyWhopper.jpg</pic>
+</excursion>
+</dataroot>

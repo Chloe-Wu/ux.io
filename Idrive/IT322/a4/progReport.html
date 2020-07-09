@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Progress Report</title>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<script>
+	function myTimefunction(){
+		document.getElementById("demo").innerHTML=Date();
+	}
+	var i = 0;
+	function move(){
+		if (i == 0) {
+    	i = 1;
+    var elem = document.getElementById("progressBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+	}
+</script>
+<link href="report.css" rel="stylesheet" type="text/css">
+<!-- 
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Roboto Slab', serif;
+
+    font-family: 'Quicksand', sans-serif;
+
+-->
+</head>
+<script src="proJs.js"></script>
+<body>
+	<div id = "wrapper">
+		<div id="navbar">
+			<div class="slogan"><p>WE ONLY LIVE ONCE.&nbsp;</p>
+			</div>
+			<div class="NAME" style="font-size: 24px">Project Progress Report</div>
+			<div class="nav">
+			<a href = "#" style="color:black">About</a>
+			<a href = "#">Progress</a>
+			<a href ="#"> Prototype</a>
+			<a href = "#">Project</a>
+			</div>
+		</div>
+		<div id ="space">
+		</div>
+		<div id ="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque deserunt eaque magnam accusamus consequatur delectus minima quia, magni odit quo soluta officia.
+		</div>
+	  </div>
+	  <button type="button" onclick=myTimefunction()>Local Time</button>
+	<p id="demo"></p>
+
+	
+		<div id="footer">&copy; W. Yiwei 2020</div>
+</body>
+</html>

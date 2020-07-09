@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Basic Site Starter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+    <script>
+$(document).ready(function(){
+	'user strict';
+	//user jQuery ajax call
+	$.ajax({
+		url:"tripsList.xml",
+		cache:false,
+		dataType:"xml",
+		success:function(xml){
+			//empty the div on the screen
+			
+			$("#contents").empty();
+			
+			//find each record friends is the name of the table
+			$(xml).find ("tour").each(function(){
+				
+				var info = '<ul data-role="listview"><li><a href="#page'+$(this).find("ID").text()+'"><img src='
+				+$(this).find("pic").text()
+				+' alt=".">'
+				+'<h1>Tour:'
+				+$(this).find("model").text()
+				+'</h1><p>Cost: '
+				+$(this).find("cost").text()
+				+'</p><p>Tourstops: '
+				+$(this).find("notes").text()
+				+'</p></a></li></ul>';
+				//add the info to the div on the page
+				$("#contents").append(info);
+				
+			});
+			
+		}
+	});
+	
+});
+    </script>
+	<script>
+		$(document).on("pagecreate",function(){
+		$('#calcButton').click(function(){
+		var TotalPayments = $('#N').val();
+		var Principal = $('#P').val();
+		var Total = TotalPayments*Principal;
+		$('#Answer').html("The total payment of these people is: $"+Total);
+	});
+}); 
+	</script>
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1>Beautiful<br>Italy Tours&nbsp;</h1>
+</div>
+<div role="main" class="ui-content" id="contents">
+	
+</div>
+<div data-role="footer">
+	<h4>@Yiwei.W&nbsp;</h4>
+</div>
+</div>
+
+<div data-role="page" id="page1">
+<div data-role="header">
+<a href="#page" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Beautiful Tuscany</h1>
+</div>
+<div class="ui-content">
+			<img src="tour1.jpg" width="320px" height="250px" alt="/">
+			<label>How many people are going?</label>
+			<input type="number" id="N" name="N">
+			<div id="P" name ="P" value="990"></div>
+    		<a href="#" class="ui-btn" id="calcButton">Calculate</a> <br>
+    		<div id="Answer"></div>
+<div data-role="footer">
+<h4>@Yiwei.W&nbsp;</h4>
+</div>
+</div>
+</div>
+	
+<div data-role="page" id="page2">
+<div data-role="header">
+<a href="#page" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>The Best of Italy</h1>
+</div>
+<div class="ui-content">
+			<img src="tour2.jpg" width="320px" height="250px" alt="/">
+			<label>How many people are going?</label>
+			<input type="number" name="N">
+			<div name ="P" value="2100"></div>
+    		<a href="#" class="ui-btn" id="calcButton">Calculate</a> <br>
+    		<div id="Answer"></div>
+<div data-role="footer">
+<h4>@Yiwei.W&nbsp;</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="page3">
+<div data-role="header">
+<a href="#page" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Historic Places</h1>
+</div>
+<div class="ui-content">
+			<img src="tour3.jpg" width="320px" height="250px" alt="/">
+			<label>How many people are going?</label>
+			<input type="number" id="N" name="N">
+			<div id="P" name ="P" value="1760"></div>
+    		<a href="#" class="ui-btn" id="calcButton">Calculate</a> <br>
+    		<div id="Answer"></div>
+<div data-role="footer">
+<h4>@Yiwei.W&nbsp;</h4>
+</div>
+</div>
+</div>
+	
+<div data-role="page" id="page4">
+<div data-role="header">
+<a href="#page" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>The Art Tour</h1>
+</div>
+<div class="ui-content">
+			<img src="tour4.jpg" width="320px" height="250px" alt="/">
+			<label>How many people are going?</label>
+			<input type="number" id="N" name="N">
+			<div id="P" name ="P" value="1450"></div>
+    		<a href="#" class="ui-btn" id="calcButton">Calculate</a> <br>
+    		<div id="Answer"></div>
+<div data-role="footer">
+<h4>@Yiwei.W&nbsp;</h4>
+</div>
+</div>
+</div>
+
+</body>
+
+
+</html>

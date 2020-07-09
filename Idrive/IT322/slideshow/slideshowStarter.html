@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Self-Running Slideshow</title>
+<style>
+#pano{
+/*Set the width of #pano to the total width of all the images combined*/
+	width: 1600px; /*(320px x 5)*/
+	/*missing line*/
+	position:relative;
+	/*missing line*/
+	z-index:0;
+}
+#panoWrapper{	
+/*Set the width of #panoWrapper equal to the width of one picture*/
+	width:320px;
+	height:240px;
+	/*missing line*/
+	overflow:hidden;
+    /*missing line*/
+	z-index:1;
+}
+#divOnYourPage{
+/*This is the div on your page that contains #panoWrapper and #pano. It can be called anything, but position has to be set to relative. */
+	position:relative;
+	width:320px;
+	margin-left:auto;
+	margin-right:auto;
+	/*missing line*/
+	z-index:2;
+}
+#pano img{
+	float:left;
+}
+.clearIt {
+	clear: left;
+	text-align: center;
+}
+
+/*container and #title are not necessary for the slideshow to work*/
+#container{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title {
+	background-color: #FFFFFF;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+</style>
+<!-- Load the base jquery code from the jquery Content Distribution Network (CDN) -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+	
+</head>
+ 
+<body> 
+<div id="container">
+	<div id="title">Mouse-Click Slideshow</div>
+	<div id="divOnYourPage">
+	<div id="panoWrapper">
+    	<div id="pano">
+<!-- Load the pictures in order from left to right - the first and last picture must be the same! -->
+        <!--missing line-->
+			<img src="tajMahal_320x240.jpg" width="320" height="240" alt="/">
+        <!--missing line-->
+			<img src="rome_320x240.jpg" width="320" height="240" alt="/">
+        <!--missing line-->
+			<img src="lincoln_320x240.jpg" width="320" height="240" alt="/">
+        <!--missing line-->
+			<img src="gondolas_320x240.jpg" width="320" height="240" alt="/">
+        <!--missing line-->
+			<img src="tajMahal_320x240.jpg" width="320" height="240" alt="Taj Mahal">
+        </div>
+      <div class="clearIt"></div>
+    </div>
+    </div>
+    </div>
+<script>    
+
+   $(document).ready(function(){
+	   var numClick=0;
+	   
+	   $("#pano").click(function(){
+	   if (numClick < 4)
+	   {
+		   $(this).animate({left:"-=320px"},500);
+		   numClick ++;
+	   };
+	   if (numClick==4){
+		   $(this).animate({left:"0px"},0);
+		  numClick=0;
+	   };
+   });
+    });
+</script>
+</body>
+</html>

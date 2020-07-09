@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>color depth explained</title>
+<style type="text/css">
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	background-repeat: repeat;
+	background-image: url(Untitled-3.jpg);
+}
+#title {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-size: 121px;
+	color: #5F4911;
+	text-align: center;
+	background-image: url(title.jpg);
+	background-repeat: no-repeat;
+	min-width: 144px;
+	min-height: 187px;
+	background-size: cover;
+}
+#colWrapper #leftCol #pictures {
+}
+#nav {
+	text-decoration: none;
+	text-align: center;
+	color: hsla(0,100%,5%,1.00);
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-size: 25px;
+}
+#nav a {
+	text-align: left;
+	color: hsla(0,100%,0%,1.00);
+	text-decoration: none;
+	padding-right: 253px;
+	padding-left: 253px;
+}
+	#nav a:hover{
+	color: #6F0D0D;
+	background-color: #000000;
+	}
+#colWrapper {
+	background-color: hsla(0,9%,98%,0.53);
+	color: hsla(278,57%,14%,1.00);
+}
+#leftCol {
+	width: 62%;
+	float: left;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+#colWrapper #leftCol #pictures {
+	margin-top: 6px;
+	margin-right: 6px;
+	margin-bottom: 6px;
+	margin-left: 6px;
+}
+#leftCol p {
+	float: left;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 22px;
+	padding-right: 81px;
+	padding-left: 86px;
+}
+#leftCol  img {
+	float: left;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-right: 95px;
+	margin-left: 95px;
+	text-align: left;
+	border-bottom: thick groove hsla(0,0%,0%,1.00);
+	border-top-width: thick;
+	border-right-width: thick;
+	border-left-width: thick;
+	border-top-style: groove;
+	border-right-style: groove;
+	border-left-style: groove;
+	background-color: hsla(0,0%,100%,1.00);
+}
+#rightCol {
+	float: left;
+	width: 32%;
+}
+#rightCol p {
+	padding-left: 73px;
+	padding-right: 73px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 22px;
+}
+#footer {
+	text-align: center;
+	margin-top: 15px;
+	color: hsla(0,0%,100%,1.00);
+}
+.clearIt {
+	clear: left;
+	background-color: #6588A8;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color: hsla(17,54%,42%,1.00);
+	-webkit-box-shadow: 0px 0px;
+	box-shadow: 0px 0px;
+	background-image: url(Untitled-3.jpg);
+	background-repeat: repeat;
+}
+#jpegText {	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+#wrapper #title img {
+	margin-left: 94%;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="title"><img src="Background.gif" alt="Gears" width="88" height="62" align="middle" /></div>
+<div id="nav"><a href="#">Return</a> | <a href="#">Graphics</a> | <a href="#">Five Types of Media</a></div>
+  <div id="colWrapper">
+    <div id="leftCol">
+      <div id="pictures"><img src="duomo1.gif" height="250" width="158" alt="1 bit color" /><img src="duomo2.gif" height="250" width="158" alt="4 bit color" /><img src="duomo3.gif" height="250" width="158" alt="8 bit color" /></div>
+		<p>All color information in a bitmap is stored numerically. To a computer, numbers are 
+    stored as a collection of 1's and 0's - also known as binary digits or bits. 
+    One bit color only uses a 0 or a 1 to repesent each pixel on a screen. A bitmap 
+    with a color depth of 1 bit can only be a pure black and white picture. 4 
+    bit color allows for 16 different colors in the bitmap. (More bits = more 
+    possible colors) 8 bit images will allow 256 colors, 16 bit gives over 65 
+    thousand colors and 24 bits will allow 16.7 million colors! Most desktop computer 
+    being produced today are capable of displaying 32 bit color images. They contain 
+    pallettes of 4,294,967,296 possible colors. (Far greater than the eye can 
+			discern.)
+    <br />
+Of course, the greater the color depth the more storage space the picture 
+    will take. It used to be that for most multimedia work that ended up on the 
+    Internet 256 colors (8 bit) worked just fine. But as you can see in the examples 
+    above, even 256 colors has a problem with gradients. (Look closely at the 
+    sky.) But the greater color depth demands more storage space for each picture. 
+    Compression schemes were invented to take all of the raw data in a picture 
+    and squeeze it into a smaller package. The most popular compression schemes 
+    on the Web today are GIF and JPEG.</p>
+    </div>
+    
+    <div id="rightCol">
+
+        <p>GIF 
+          - Graphics Interchange Format </p>
+        <p>This is the most common graphic format on the Web. It can be used for stills 
+          or animated images. It can only show 256 colors (8 bit) but the images don't 
+          loose any color information in compression. (GIF's are &quot;lossless.&quot;) 
+          They can make use of transparency (an alpha channel) to allow the background 
+          of the web page show through parts of the image. Because of the way they compress 
+          information, GIFs work best when large areas of color appear in the original 
+          image. It is possible to simulate more colors in a GIF by using dithering. 
+          Dithering places two color pixels (from the 256 possible) right next to each 
+          other so that they appear as a third color. (A red pixel right next to a blue 
+          pixel appears to the eye as purple.) Dithering sharply increases file size! 
+          GIF files can be interlaced - they will first appear in low resolution and 
+          then gradually appear in full resolution as they completely download.</p>
+
+        <p>JPEG 
+          - Joint Photographic Experts Group (JPG in Windows)</p>
+        <p>JPEG was developed primarily for photographic images, but it works well with 
+          all sorts of pictures. It uses 24 bit color so it supports millions of colors. 
+          It will not support transparency and is a &quot;lossy&quot; format. Lossy 
+          means that it will loose color information as it compresses the file from 
+          the original. It is possible to control how much is lost. Hard edges in a 
+          picture do not compress well in JPEG so it is also possible to set JPEG's 
+          smoothing effects. The more smoothing in a picture the smaller the file size. 
+          JPEG's can load progressively - the picture will load quickly at a low resolution 
+          and then gain detail as the download continues. Progressive loads are slightly 
+          different than an interlaced load, like those used in GIFs. Gradient colors, 
+          photographs or scanned images work best with JPEG.</p>
+    </div>
+      <p>&nbsp;</p>
+  </div>
+    <div class="clearIt"></div>
+</div>
+<div id="footer">&copy;Yiwei 2019</div>
+</div>
+</body>
+</html>

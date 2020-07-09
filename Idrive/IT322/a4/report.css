@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* #373737 #C0B283 #DCD0D0 #F4F4F4 */
+#html,body{
+	margin:0;
+	padding:0;
+}
+hr{
+	border:dashed;
+}
+#space{
+    float: left;
+}
+.titles{
+	font-weight: 500;
+}
+#myProgress {
+  width: 100%;
+  background-color: grey;
+}
+#progressBar {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+}
+.slogan{
+	width: 33%;
+    float: left;
+    font-size: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #000000;
+    font-weight: 900;
+	text-align: center;
+	vertical-align: bottom;
+
+}
+.NAME{
+    width: 33%;
+    float: left;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-style: normal;
+    font-weight: 900;
+	text-align: center;
+	vertical-align: bottom;
+}
+.NAME a{
+	text-decoration: none;
+	color: #000000;
+	padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav{
+	width:33%;
+    margin-left: 60%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.nav a{
+    padding-top: 10px;
+    padding-left: 8%;
+    padding-bottom: 10px;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: #DCD0D0;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+	font-size: 10px;
+	vertical-align: bottom;
+}
+.nav a:hover{
+    color: #373737;
+    text-align: center;
+}
+#navbar{
+    background-color: white;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    float: left;
+    border-bottom: 1px solid hsla(0,0%,70%,0.68);
+}
+#contents{
+    float: left;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 5%;
+    align-content: center;
+    font-family: "abril-fatface";
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 100px;
+    line-height: 200%;
+    border-left: thick groove hsla(0,7%,64%,0.60);
+	border-right: thick groove hsla(0,7%,64%,0.60);
+}
+
+#footer{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    background-color: #373737;
+    color: #F4F4F4;
+    letter-spacing: 1px;
+    list-style-type: square;
+}

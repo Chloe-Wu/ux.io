@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+	<style type="text/css">
+	#wrapper {
+}
+    #title {
+}
+    #content {
+}
+    .bar {
+    width: 500px;
+}
+.bar p{
+	background-color:#f00;
+	height: 40px;
+	width: 0px;
+}
+		.bar span{
+			position:relative;
+			padding-left: 15px;
+			left:100%;
+			display: none;
+		}
+    </style>
+	<script>
+		$(document).ready(function(){
+			$(".bar").each(function(){
+				var length = $(this).find("span").html();
+				$(this).find("p").delay(500).animate({'width':length},3500,function(){
+					$(this).find("span").fadeIn(1000);
+				
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="title">Animated Bar Chart</div>
+  <div id="content">
+	<ul>
+	  <li>First Item<br>	
+		<div class="bar">
+		<p><span>25%</span></p>
+		</div>
+	  </li>
+		<li>Second Item<br>	
+		<div class="bar">
+		<p><span>75%</span></p>
+		</div>
+	  </li>
+		<li>Third Item<br>	
+		<div class="bar">
+		<p><span>88%</span></p>
+		</div>
+	  </li>
+	  </ul>
+	</div>
+	
+</div>
+	
+</body>
+</html>

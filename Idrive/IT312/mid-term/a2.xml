@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2020-01-21T17:50:46">
+<apollo>
+<ID>5</ID>
+<Product>Spacecraft Kit</Product>
+<Year>1969</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>Fascinations Metal Earth Apollo CSM with LM 3D Metal Model Kit </Crew>
+<Price>$16.95</Price>
+<LandingDate>5/26/1969</LandingDate>
+<Duration>8.00 days</Duration>
+<Notes>The Apollo 11 moon landing required two spacecraft- The lunar module (LM) and command service module (CSM).</Notes>
+<Patch>souvenir_1.jpg</Patch>
+<TheLink>https://www.nasa.gov/mission_pages/apollo/missions/apollo10.html</TheLink>
+</apollo>
+<apollo>
+<ID>6</ID>
+<Product>Coin Set</Product>
+<Year>1969</Year>
+<Price>$39.95</Price>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>The APOLLO SPACE MISSIONS Colorized Florida Quarters US 13-Coin Set NASA PROGRAM </Crew>
+<LaunchDate>7/16/1969</LaunchDate>
+<LandingDate>7/24/1969</LandingDate>
+<Duration>8.14 days</Duration>
+<Notes>APOLLO SPACE MISSIONS - Complete 13-coin Set - Collectible Coins </Notes>
+<Patch>souvenir_2.jpg</Patch>
+<TheLink>https://www.nasa.gov/mission_pages/apollo/missions/apollo11.html</TheLink>
+</apollo>
+<apollo>
+<ID>7</ID>
+<Product>Lunar Lander set</Product>
+<Year>1969</Year>
+<Price>$35.99</Price>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>BRIKSMAX Led Lighting Kit for Creator NASA Apollo 11 Lunar Lander - Compatible with Lego 10266 Building Blocks Model- Not Include The Lego Set </Crew>
+<LaunchDate>11/14/1969</LaunchDate>
+<LandingDate>11/24/1969</LandingDate>
+<Duration>10.19 days</Duration>
+<Notes>This light kit is designed for LEGO 10266, you will feel amazing once you done the installation. </Notes>
+<Patch>souvenir_3.jpg</Patch>
+<TheLink>https://www.nasa.gov/mission_pages/apollo/missions/apollo12.html</TheLink>
+</apollo>
+</dataroot>
